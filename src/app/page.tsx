@@ -16,7 +16,11 @@ import {
   Sparkles,
   Layers,
   Lock,
-  BarChart3
+  BarChart3,
+  X,
+  FileText,
+  Scale,
+  Clock
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -86,36 +90,69 @@ print(f"Checkout URL: {payment.checkout_url}")`
     }
   ];
 
+  const problems = [
+    {
+      icon: X,
+      title: "Payments aren't actually 'no-code'",
+      description: "You can build a tool in hours, but adding payments still means wrestling with backend logic, webhooks, subscription state, and entitlement checks. Most builders ship—but never monetize."
+    },
+    {
+      icon: Scale,
+      title: "Legal & tax anxiety blocks launches",
+      description: "Do I need a business entity? Sales tax? VAT? Am I breaking the law? These fears keep builders from ever hitting 'launch' or charging customers."
+    },
+    {
+      icon: Layers,
+      title: "Too many moving parts",
+      description: "Stripe for payments. Google for legal docs. Custom code for access control. Manual support for billing issues. It's overwhelming, fragmented, and error-prone."
+    },
+    {
+      icon: Clock,
+      title: "Time-to-first-dollar is too slow",
+      description: "Building is fast. Monetization is slow. By the time you figure out subscriptions, failed payments, and compliance, your momentum is dead."
+    }
+  ];
+
   const features = [
     {
       icon: Zap,
       title: "One-Line Integration",
-      description: "Add payments to your vibe-coded app with a single import. No complex setup required."
+      description: "Add payments to your vibe-coded app with a single import. No backend, no webhooks, no state management required."
     },
     {
       icon: Shield,
-      title: "PCI Compliant",
-      description: "Enterprise-grade security out of the box. We handle compliance so you don't have to."
+      title: "Built-in Compliance",
+      description: "PCI-DSS, GDPR, and SOC 2 compliant out of the box. We handle security audits so you can focus on building."
+    },
+    {
+      icon: FileText,
+      title: "Legal Guidance Included",
+      description: "Plain-English guides on business registration, tax obligations, and when you need them. Launch with confidence, not confusion."
     },
     {
       icon: Globe,
-      title: "135+ Currencies",
-      description: "Accept payments globally with automatic currency conversion and local payment methods."
+      title: "Global Tax Handling",
+      description: "Automatic sales tax, VAT, and GST calculation for 190+ countries. We collect, report, and remit so you don't have to."
     },
     {
       icon: Layers,
-      title: "Subscriptions Built-in",
-      description: "Recurring billing, trials, and usage-based pricing with zero configuration."
+      title: "Smart Access Control",
+      description: "Built-in user gating and entitlements. No custom middleware, no sessions to manage—just works with your auth."
     },
     {
       icon: Lock,
       title: "Fraud Protection",
-      description: "AI-powered fraud detection that blocks bad actors without blocking good customers."
+      description: "AI-powered fraud detection that blocks bad actors without blocking good customers. Chargebacks handled automatically."
     },
     {
       icon: BarChart3,
       title: "Real-time Analytics",
-      description: "Beautiful dashboards showing revenue, MRR, churn, and customer insights."
+      description: "Beautiful dashboards showing revenue, MRR, churn, and customer insights—without connecting analytics tools."
+    },
+    {
+      icon: CreditCard,
+      title: "One Dashboard for Everything",
+      description: "Payments, subscriptions, customer support, refunds, and disputes—all in one place. No tab-switching between tools."
     }
   ];
 
@@ -128,7 +165,8 @@ print(f"Checkout URL: {payment.checkout_url}")`
       features: [
         "2.9% + 30¢ per transaction",
         "Up to $10k monthly volume",
-        "Basic analytics dashboard",
+        "Basic tax handling (US only)",
+        "Getting started legal guide",
         "Email support",
         "Checkout links"
       ],
@@ -139,13 +177,14 @@ print(f"Checkout URL: {payment.checkout_url}")`
       name: "Pro",
       price: "$49",
       period: "/month",
-      description: "For growing startups and businesses",
+      description: "For growing startups ready to scale",
       features: [
         "2.5% + 25¢ per transaction",
         "Unlimited volume",
-        "Advanced analytics & reports",
+        "Global tax automation",
+        "Legal compliance dashboard",
         "Priority support",
-        "Custom checkout",
+        "Custom checkout & branding",
         "Webhook management",
         "Team members"
       ],
@@ -158,13 +197,14 @@ print(f"Checkout URL: {payment.checkout_url}")`
       period: "",
       description: "For high-volume businesses",
       features: [
-        "Custom rates",
+        "Custom transaction rates",
         "Unlimited everything",
+        "Dedicated legal advisor",
+        "Tax filing assistance",
         "Dedicated account manager",
         "SLA guarantees",
         "Custom integrations",
-        "On-premise option",
-        "Volume discounts"
+        "On-premise option"
       ],
       cta: "Contact Sales",
       popular: false
@@ -308,6 +348,66 @@ print(f"Checkout URL: {payment.checkout_url}")`
           </div>
         </section>
 
+        <section id="problem" className="py-24 px-6 bg-muted/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <Badge variant="secondary" className="mb-4 border-destructive/30 bg-destructive/10 text-destructive">
+                The Problem
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                You can ship fast.{" "}
+                <span className="text-muted-foreground">But can you charge?</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Vibe-coding platforms let solopreneurs build tools in hours—but monetization still takes weeks. 
+                The issue isn't just technical. <span className="font-semibold text-foreground">It's a confidence problem.</span>
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {problems.map((problem, index) => (
+                <motion.div
+                  key={problem.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="h-full bg-card/50 border-border/50">
+                    <CardHeader>
+                      <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
+                        <problem.icon className="w-6 h-6 text-destructive" />
+                      </div>
+                      <CardTitle className="text-xl">{problem.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base leading-relaxed">
+                        {problem.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div 
+              className="mt-12 text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <span className="font-semibold text-foreground">PayFlow solves the confidence problem.</span> We don't just make payments work—we make sure you know you're doing it right.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         <section id="features" className="py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div 
@@ -318,14 +418,14 @@ print(f"Checkout URL: {payment.checkout_url}")`
             >
               <Badge variant="secondary" className="mb-4 border-primary/20 bg-primary/10 text-primary">Features</Badge>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-                Everything you need to get paid
+                Everything you need to monetize with confidence
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Built specifically for AI-generated apps. We handle the complexity so your vibe-coded product can focus on what matters.
+                Payments that just work. Legal clarity that removes fear. All-in-one simplicity that eliminates overwhelm.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
