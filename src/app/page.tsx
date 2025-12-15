@@ -196,7 +196,13 @@ export default function Home() {
                   key={i}
                   className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center"
                 >
-                  <span className="text-muted-foreground font-medium">{tool.name}</span>
+                  <Image 
+                    src={tool.logo} 
+                    alt={tool.name}
+                    width={120}
+                    height={40}
+                    className="opacity-70 hover:opacity-100 transition-opacity"
+                  />
                 </div>
               ))}
             </motion.div>
