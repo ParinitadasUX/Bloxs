@@ -62,6 +62,14 @@ export default function Home() {
     { name: "GitHub Copilot", logo: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" },
     { name: "Windsurf", logo: "https://codeium.com/favicon.ico" },
     { name: "Lovable", logo: "https://lovable.dev/favicon.svg" },
+    { name: "ChatGPT", logo: "https://cdn.oaistatic.com/_next/static/media/apple-touch-icon.59f2e898.png" },
+    { name: "Claude", logo: "https://www.anthropic.com/images/icons/apple-touch-icon.png" },
+    { name: "Gemini", logo: "https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" },
+    { name: "Perplexity", logo: "https://www.perplexity.ai/favicon.svg" },
+    { name: "Tabnine", logo: "https://www.tabnine.com/favicon.ico" },
+    { name: "Cody", logo: "https://sourcegraph.com/.assets/img/sourcegraph-mark.svg" },
+    { name: "CodeWhisperer", logo: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" },
+    { name: "Devin", logo: "https://preview.devin.ai/favicon.svg" },
   ];
 
   const features = [
