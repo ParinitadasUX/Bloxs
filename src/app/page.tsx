@@ -55,21 +55,21 @@ export default function Home() {
   };
 
   const aiToolLogos = [
-    { name: "Cursor", logo: "https://cursor.sh/brand/icon.svg" },
-    { name: "v0", logo: "https://v0.dev/v0.svg" },
-    { name: "Bolt", logo: "https://bolt.new/social_preview_index.jpg" },
-    { name: "Replit", logo: "https://replit.com/public/images/logo-small.png" },
-    { name: "GitHub Copilot", logo: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" },
-    { name: "Windsurf", logo: "https://codeium.com/favicon.ico" },
-    { name: "Lovable", logo: "https://lovable.dev/favicon.svg" },
-    { name: "ChatGPT", logo: "https://cdn.oaistatic.com/_next/static/media/apple-touch-icon.59f2e898.png" },
-    { name: "Claude", logo: "https://www.anthropic.com/images/icons/apple-touch-icon.png" },
-    { name: "Gemini", logo: "https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" },
-    { name: "Perplexity", logo: "https://www.perplexity.ai/favicon.svg" },
-    { name: "Tabnine", logo: "https://www.tabnine.com/favicon.ico" },
-    { name: "Cody", logo: "https://sourcegraph.com/.assets/img/sourcegraph-mark.svg" },
-    { name: "CodeWhisperer", logo: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" },
-    { name: "Devin", logo: "https://preview.devin.ai/favicon.svg" },
+    { name: "Cursor", logo: "/logos/cursor.svg" },
+    { name: "v0", logo: "/logos/v0.svg" },
+    { name: "Bolt", logo: "/logos/bolt.svg" },
+    { name: "Replit", logo: "/logos/replit.svg" },
+    { name: "GitHub Copilot", logo: "/logos/github.svg" },
+    { name: "Windsurf", logo: "/logos/windsurf.svg" },
+    { name: "Lovable", logo: "/logos/lovable.svg" },
+    { name: "ChatGPT", logo: "/logos/chatgpt.svg" },
+    { name: "Claude", logo: "/logos/claude.svg" },
+    { name: "Gemini", logo: "/logos/gemini.svg" },
+    { name: "Perplexity", logo: "/logos/perplexity.svg" },
+    { name: "Tabnine", logo: "/logos/tabnine.svg" },
+    { name: "Cody", logo: "/logos/cody.svg" },
+    { name: "CodeWhisperer", logo: "/logos/codewhisperer.svg" },
+    { name: "Devin", logo: "/logos/devin.svg" },
   ];
 
   const features = [
@@ -198,15 +198,7 @@ export default function Home() {
                   key={i}
                   className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center"
                 >
-                  <div className="relative w-32 h-12 flex items-center justify-center">
-                    <Image
-                      src={tool.logo}
-                      alt={tool.name}
-                      width={128}
-                      height={48}
-                      className="object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-                    />
-                  </div>
+                  <span className="text-muted-foreground font-medium">{tool.name}</span>
                 </div>
               ))}
             </motion.div>
