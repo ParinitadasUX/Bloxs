@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { 
   Zap, 
   CreditCard, 
@@ -15,13 +16,42 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []);
+
+  const handleWaitlistSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success('You\'re on the waitlist! We\'ll notify you when we launch.');
+        setEmail("");
+      } else {
+        toast.error(data.error || 'Something went wrong');
+      }
+    } catch (error) {
+      toast.error('Failed to join waitlist. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const aiToolExamples = [
     { name: "Cursor", prompt: '"Add a Buy Now button linking to payflow.dev/checkout/prod_abc"' },
@@ -84,11 +114,26 @@ export default function Home() {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Zero-code payment integration. Tell your AI tool what you need, and PayFlow handles the rest—checkout, tax, compliance, analytics.
             </p>
-            <div className="flex gap-4 justify-center">
-              <Button size="lg" className="h-12 px-8 bg-primary hover:bg-primary/90">
-                Start Free
-                <ArrowRight className="ml-2 w-4 h-4" />
+            <form onSubmit={handleWaitlistSignup} className="flex gap-3 max-w-md mx-auto mb-4">
+              <Input 
+                type="email" 
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="h-12 glass"
+              />
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="h-12 px-8 bg-primary hover:bg-primary/90"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Joining..." : "Join Waitlist"}
               </Button>
+            </form>
+            <p className="text-sm text-muted-foreground mb-8">Join early access. No credit card required.</p>
+            <div className="flex gap-4 justify-center">
               <Button size="lg" variant="outline" className="h-12 px-8 glass">
                 View Demo
               </Button>
