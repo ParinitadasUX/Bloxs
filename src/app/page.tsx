@@ -18,7 +18,9 @@ import {
   X,
   FileText,
   Scale,
-  Clock
+  Clock,
+  MousePointerClick,
+  TrendingUp
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -186,29 +188,41 @@ export default function Home() {
       </nav>
 
       <main>
-        <section className="px-8 py-32">
+        <section className="px-8 py-32 bg-muted/20">
           <div className="max-w-[1400px] mx-auto">
             <div className="max-w-[900px]">
-              <h1 className="text-[5rem] leading-[0.95] font-black mb-8 tracking-tight">
-                Add payments<br/>
-                without code
+              <h1 className="text-[3.5rem] leading-[1.1] font-black mb-8 tracking-tight">
+                Why <span className="text-primary">no-code app builders</span> choose PayFlow
               </h1>
               
-              <p className="text-2xl text-muted-foreground mb-12 max-w-[600px] font-normal">
-                Tell your AI tool what you want. Get a checkout link. Paste it. Done.
+              <p className="text-xl text-muted-foreground mb-16 max-w-[700px] leading-relaxed">
+                Keep your focus where it belongs: building great monetizable apps for your business or hobby. PayFlow handles everything else: no servers to manage, no database to configure, no security settings to tweak. Just point, click, and build.
               </p>
-              
-              <div className="flex gap-4 mb-16">
-                <Button size="lg" className="h-14 px-10 text-base bg-primary hover:bg-primary/90">
-                  Start Free
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-[1200px]">
+              <div className="border-l-4 border-border pl-8">
+                <Zap className="w-12 h-12 mb-6 text-primary" />
+                <h3 className="text-2xl font-black mb-4">Easy to use</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  PayFlow is easy to use and set up. Instantly deploy a checkout for free, and affordably scale as you grow.
+                </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 text-sm text-muted-foreground">
-                <div>No credit card</div>
-                <div>5-minute setup</div>
-                <div>Works with any AI tool</div>
+              <div className="border-l-4 border-border pl-8">
+                <MousePointerClick className="w-12 h-12 mb-6 text-primary" />
+                <h3 className="text-2xl font-black mb-4">Point and click backend</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  PayFlow includes everything you need for a great app: payments, subscriptions, tax automation, fraud protection, and analytics. Use one or all.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-border pl-8">
+                <TrendingUp className="w-12 h-12 mb-6 text-primary" />
+                <h3 className="text-2xl font-black mb-4">Scales when you need it</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  PayFlow is enterprise-grade infrastructure, with all the performance, high availability, and flexibility you need when your app goes viral and hits it big.
+                </p>
               </div>
             </div>
           </div>
