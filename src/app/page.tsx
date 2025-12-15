@@ -53,10 +53,14 @@ export default function Home() {
     }
   };
 
-  const aiToolExamples = [
-    { name: "Cursor", prompt: '"Add a Buy Now button linking to payflow.dev/checkout/prod_abc"' },
-    { name: "v0", prompt: '"Create checkout button at payflow.dev/checkout/prod_abc"' },
-    { name: "Bolt", prompt: '"Payment button to payflow.dev/checkout/prod_abc"' },
+  const aiToolLogos = [
+    "Cursor",
+    "v0",
+    "Bolt",
+    "Replit",
+    "GitHub Copilot",
+    "Windsurf",
+    "Lovable",
   ];
 
   const features = [
@@ -162,29 +166,36 @@ export default function Home() {
             <p className="text-muted-foreground">Just prompt. No code required.</p>
           </div>
 
-          <Card className="glass p-0 overflow-hidden max-w-3xl mx-auto">
-            <div className="flex border-b border-border/50">
-              {aiToolExamples.map((tool, index) => (
-                <button
-                  key={tool.name}
-                  onClick={() => setActiveTab(index)}
-                  className={`flex-1 px-6 py-3 text-sm font-medium transition-colors ${
-                    activeTab === index 
-                      ? "bg-primary/20 text-primary border-b-2 border-primary" 
-                      : "hover:bg-primary/5"
-                  }`}
+          <div className="relative max-w-5xl mx-auto overflow-hidden py-12">
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+            
+            <motion.div
+              className="flex gap-12 items-center"
+              animate={{
+                x: [0, -1400],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 25,
+                  ease: "linear",
+                },
+              }}
+            >
+              {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center"
                 >
-                  {tool.name}
-                </button>
+                  <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    {tool}
+                  </span>
+                </div>
               ))}
-            </div>
-            <div className="p-8">
-              <div className="text-xs font-medium text-muted-foreground mb-3">Your prompt:</div>
-              <div className="font-mono text-sm p-4 rounded-lg bg-muted/30 border border-border/50">
-                {aiToolExamples[activeTab].prompt}
-              </div>
-            </div>
-          </Card>
+            </motion.div>
+          </div>
         </section>
 
         <section id="pricing" className="px-6 py-24 max-w-7xl mx-auto">
