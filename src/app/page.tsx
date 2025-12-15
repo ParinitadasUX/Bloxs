@@ -20,10 +20,14 @@ import {
   X,
   FileText,
   Scale,
-  Clock
+  Clock,
+  Bot,
+  Copy,
+  CheckCircle2
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { DashboardMockup } from "@/components/dashboard-mockup";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -41,52 +45,32 @@ const staggerContainer = {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
 
-  const codeExamples = [
+  const aiToolExamples = [
     {
-      title: "React / Next.js",
-      code: `import { PayFlow } from '@payflow/react';
-
-export function Checkout() {
-  return (
-    <PayFlow
-      apiKey={process.env.PAYFLOW_KEY}
-      amount={2999}
-      currency="USD"
-      onSuccess={(payment) => {
-        console.log('Paid!', payment.id);
-      }}
-    />
-  );
-}`
+      name: "Cursor",
+      logo: "⌘",
+      prompt: '"Add a gradient button that says \'Upgrade to Pro\' and links to https://payflow.dev/checkout/prod_abc123"',
+      result: "Cursor generates a beautiful button with your branding"
     },
     {
-      title: "API",
-      code: `curl -X POST https://api.payflow.dev/v1/payments \\
-  -H "Authorization: Bearer pf_live_xxx" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "amount": 2999,
-    "currency": "USD",
-    "customer_email": "user@example.com",
-    "success_url": "https://app.com/success",
-    "cancel_url": "https://app.com/cancel"
-  }'`
+      name: "v0",
+      logo: "▼",
+      prompt: '"Create a pricing section with two cards: Starter (free) and Pro ($49/mo). The Pro card should have a button linking to my PayFlow checkout"',
+      result: "v0 generates a complete pricing section"
     },
     {
-      title: "Python",
-      code: `from payflow import PayFlow
-
-client = PayFlow(api_key="pf_live_xxx")
-
-payment = client.payments.create(
-    amount=2999,
-    currency="USD",
-    customer_email="user@example.com",
-    metadata={"order_id": "12345"}
-)
-
-print(f"Checkout URL: {payment.checkout_url}")`
+      name: "Bolt",
+      logo: "⚡",
+      prompt: '"Add a checkout button to my pricing page that redirects to payflow.dev/checkout/prod_abc123"',
+      result: "Bolt adds the button and handles the redirect"
+    },
+    {
+      name: "Replit",
+      logo: "🔄",
+      prompt: '"I need a payment button. When clicked, redirect to https://payflow.dev/checkout/prod_abc123"',
+      result: "Replit Agent creates the button with proper routing"
     }
   ];
 
@@ -253,8 +237,8 @@ print(f"Checkout URL: {payment.checkout_url}")`
             >
               <motion.div variants={fadeInUp}>
                 <Badge variant="secondary" className="mb-6 px-4 py-1.5 text-sm font-medium border border-primary/20 bg-primary/10 text-primary">
-                  <Sparkles className="w-3.5 h-3.5 mr-1.5" />
-                  Built for AI-first developers
+                  <Bot className="w-3.5 h-3.5 mr-1.5" />
+                  Built for AI Builders
                 </Badge>
               </motion.div>
               
@@ -262,32 +246,34 @@ print(f"Checkout URL: {payment.checkout_url}")`
                 variants={fadeInUp}
                 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
               >
-                Payments that{" "}
+                Add Payments to Your{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
-                  just work
+                  AI-Built App
                 </span>
+                <br />
+                <span className="text-4xl md:text-5xl">Without Writing Code</span>
               </motion.h1>
               
               <motion.p 
                 variants={fadeInUp}
                 className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
               >
-                The payment infrastructure for vibe-coded apps. One line of code, 
-                instant checkout, global payments. Ship your product, not payment logic.
+                No SDKs. No webhooks. No backend logic. Just tell your AI what you want—
+                Cursor, Bolt, v0, Replit, Lovable—and start getting paid.
               </motion.p>
               
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button size="lg" className="h-12 px-8 text-base bg-gradient-to-r from-primary to-accent hover:opacity-90 group">
                   Start Building Free
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button size="lg" variant="outline" className="h-12 px-8 text-base border-border/50 hover:bg-secondary">
                   <Terminal className="mr-2 w-4 h-4" />
-                  View Documentation
+                  Watch Demo
                 </Button>
               </motion.div>
-              
-              <motion.div variants={fadeInUp} className="mt-12 flex items-center justify-center gap-8 text-sm text-muted-foreground">
+
+              <motion.div variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-accent" />
                   No credit card required
@@ -298,51 +284,87 @@ print(f"Checkout URL: {payment.checkout_url}")`
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-accent" />
-                  Cancel anytime
+                  Works with any AI tool
                 </div>
               </motion.div>
             </motion.div>
 
             <motion.div 
-              className="mt-20 relative"
+              className="mt-20"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none h-full" />
-              <div className="rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-1 shadow-2xl shadow-primary/5">
-                <div className="rounded-xl bg-background/80 p-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-3 h-3 rounded-full bg-destructive/80" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                    <span className="ml-4 text-xs text-muted-foreground font-mono">checkout.tsx</span>
+              <div className="text-center mb-8">
+                <Badge variant="outline" className="mb-4">
+                  1️⃣ Create your product in the dashboard
+                </Badge>
+              </div>
+              <DashboardMockup />
+              
+              <div className="mt-16 text-center">
+                <Badge variant="outline" className="mb-6">
+                  2️⃣ Tell your AI tool
+                </Badge>
+                <div className="max-w-2xl mx-auto">
+                  <div className="rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 shadow-xl">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shrink-0">
+                        <Bot className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <div className="text-sm font-medium text-muted-foreground mb-2">Your prompt:</div>
+                        <div className="text-base font-mono bg-background/80 rounded-lg p-4 border border-border/50">
+                          &quot;Add a Buy Now button that links to https://payflow.dev/checkout/prod_abc123&quot;
+                        </div>
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="mt-3"
+                          onClick={() => {
+                            navigator.clipboard.writeText("Add a Buy Now button that links to https://payflow.dev/checkout/prod_abc123");
+                            setCopiedPrompt(true);
+                            setTimeout(() => setCopiedPrompt(false), 2000);
+                          }}
+                        >
+                          {copiedPrompt ? (
+                            <>
+                              <CheckCircle2 className="w-4 h-4 mr-2" />
+                              Copied!
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-4 h-4 mr-2" />
+                              Copy prompt
+                            </>
+                          )}
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                  <pre className="text-sm overflow-x-auto">
-                    <code className="text-muted-foreground">
-                      <span className="text-purple-400">import</span>{" "}
-                      <span className="text-foreground">{"{ PayFlow }"}</span>{" "}
-                      <span className="text-purple-400">from</span>{" "}
-                      <span className="text-accent">&apos;@payflow/react&apos;</span>;{"\n\n"}
-                      <span className="text-purple-400">export function</span>{" "}
-                      <span className="text-primary">Checkout</span>() {"{"}
-                      {"\n  "}
-                      <span className="text-purple-400">return</span> (
-                      {"\n    "}
-                      <span className="text-primary">{"<PayFlow"}</span>
-                      {"\n      "}
-                      <span className="text-foreground/70">amount</span>=<span className="text-accent">{"{"}</span><span className="text-orange-400">2999</span><span className="text-accent">{"}"}</span>
-                      {"\n      "}
-                      <span className="text-foreground/70">currency</span>=<span className="text-accent">&quot;USD&quot;</span>
-                      {"\n      "}
-                      <span className="text-foreground/70">onSuccess</span>=<span className="text-accent">{"{"}</span><span className="text-foreground">(payment) =&gt; redirect(&apos;/thanks&apos;)</span><span className="text-accent">{"}"}</span>
-                      {"\n    "}
-                      <span className="text-primary">/&gt;</span>
-                      {"\n  "});
-                      {"\n}{"}"}
-                    </code>
-                  </pre>
                 </div>
+              </div>
+
+              <div className="mt-16 text-center">
+                <Badge variant="outline" className="mb-6">
+                  3️⃣ Your AI generates the button
+                </Badge>
+                <div className="max-w-xl mx-auto rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 shadow-xl">
+                  <Button size="lg" className="w-full h-14 text-lg bg-gradient-to-r from-primary to-accent hover:opacity-90">
+                    <CreditCard className="w-5 h-5 mr-3" />
+                    Buy Now - $49/mo
+                  </Button>
+                  <p className="text-xs text-muted-foreground mt-4">
+                    ↑ Generated automatically by your AI tool
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-16 text-center">
+                <Badge variant="outline" className="mb-4">
+                  4️⃣ Start getting paid 💰
+                </Badge>
+                <p className="text-muted-foreground">No code written. No webhooks configured. Just works.</p>
               </div>
             </motion.div>
           </div>
@@ -463,13 +485,13 @@ print(f"Checkout URL: {payment.checkout_url}")`
             >
               <Badge variant="secondary" className="mb-4 border-primary/20 bg-primary/10 text-primary">
                 <Code2 className="w-3.5 h-3.5 mr-1.5" />
-                Integration
+                Works With Your AI Tool
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-                Ship in minutes, not weeks
+                Prompt, pay, done
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Copy, paste, done. Our SDK works seamlessly with every AI coding tool and framework.
+                Works seamlessly with every AI coding tool. No special setup. Just paste your checkout link.
               </p>
             </motion.div>
 
@@ -480,49 +502,52 @@ print(f"Checkout URL: {payment.checkout_url}")`
               viewport={{ once: true }}
             >
               <div className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm overflow-hidden">
-                <div className="flex border-b border-border/50">
-                  {codeExamples.map((example, index) => (
+                <div className="flex border-b border-border/50 overflow-x-auto">
+                  {aiToolExamples.map((tool, index) => (
                     <button
-                      key={example.title}
+                      key={tool.name}
                       onClick={() => setActiveTab(index)}
-                      className={`px-6 py-3 text-sm font-medium transition-all ${
+                      className={`px-6 py-3 text-sm font-medium transition-all whitespace-nowrap ${
                         activeTab === index 
                           ? "text-primary border-b-2 border-primary bg-primary/5" 
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
-                      {example.title}
+                      <span className="mr-2">{tool.logo}</span>
+                      {tool.name}
                     </button>
                   ))}
                 </div>
-                <div className="p-6">
-                  <pre className="text-sm overflow-x-auto">
-                    <code className="text-muted-foreground whitespace-pre">
-                      {codeExamples[activeTab].code}
-                    </code>
-                  </pre>
+                <div className="p-6 space-y-4">
+                  <div>
+                    <div className="text-xs font-medium text-muted-foreground mb-2">Your prompt:</div>
+                    <div className="text-sm font-mono bg-background/80 rounded-lg p-4 border border-border/50">
+                      {aiToolExamples[activeTab].prompt}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <ArrowRight className="w-4 h-4" />
+                    <span>{aiToolExamples[activeTab].result}</span>
+                  </div>
                 </div>
                 <div className="px-6 py-4 border-t border-border/50 bg-secondary/30 flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    Ready to copy into your project
+                    No API keys. No configuration. Just works.
                   </span>
-                  <Button size="sm" variant="secondary">
-                    Copy Code
-                  </Button>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
-              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
+              className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              {["Cursor", "v0", "Bolt", "Replit"].map((tool) => (
+              {["Cursor", "v0", "Bolt", "Replit", "Lovable"].map((tool) => (
                 <div key={tool} className="flex items-center justify-center">
-                  <div className="px-6 py-3 rounded-full border border-border/50 bg-card/50 text-sm font-medium text-muted-foreground">
-                    Works with {tool}
+                  <div className="px-4 py-2 rounded-full border border-border/50 bg-card/50 text-sm font-medium text-muted-foreground">
+                    {tool}
                   </div>
                 </div>
               ))}
