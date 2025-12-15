@@ -15,9 +15,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
+
+  React.useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
 
   const aiToolExamples = [
     { name: "Cursor", prompt: '"Add a Buy Now button linking to payflow.dev/checkout/prod_abc"' },
