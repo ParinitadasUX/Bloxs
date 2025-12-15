@@ -100,43 +100,43 @@ export default function Home() {
   const features = [
     {
       icon: Zap,
-      title: "One-Line Integration",
-      description: "Add payments to your vibe-coded app with a single import. No backend, no webhooks, no state management required."
+      title: "Zero-Code Integration",
+      description: "Add payments by telling your AI what you want. No SDKs to install, no API keys to configure, no backend code to write."
     },
     {
       icon: Shield,
-      title: "Built-in Compliance",
-      description: "PCI-DSS, GDPR, and SOC 2 compliant out of the box. We handle security audits so you can focus on building."
+      title: "Security Handled For You",
+      description: "PCI-DSS, GDPR, and SOC 2 compliant automatically. We handle security audits so you never have to think about it."
     },
     {
       icon: FileText,
-      title: "Legal Guidance Included",
+      title: "Legal Clarity Built-In",
       description: "Plain-English guides on business registration, tax obligations, and when you need them. Launch with confidence, not confusion."
     },
     {
       icon: Globe,
-      title: "Global Tax Handling",
-      description: "Automatic sales tax, VAT, and GST calculation for 190+ countries. We collect, report, and remit so you don't have to."
+      title: "Global Tax on Autopilot",
+      description: "Automatic sales tax, VAT, and GST for 190+ countries. We collect, calculate, report, and remit—completely hands-free."
     },
     {
       icon: Layers,
-      title: "Smart Access Control",
-      description: "Built-in user gating and entitlements. No custom middleware, no sessions to manage—just works with your auth."
+      title: "Access Control Included",
+      description: "Built-in user gating and entitlements. No custom middleware, no session management—just paste your link and it works."
     },
     {
       icon: Lock,
-      title: "Fraud Protection",
-      description: "AI-powered fraud detection that blocks bad actors without blocking good customers. Chargebacks handled automatically."
+      title: "Fraud Blocked Automatically",
+      description: "AI-powered fraud detection stops bad actors without blocking legitimate customers. Chargebacks handled for you."
     },
     {
       icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Beautiful dashboards showing revenue, MRR, churn, and customer insights—without connecting analytics tools."
+      title: "Analytics Out of the Box",
+      description: "Beautiful dashboards showing revenue, MRR, churn, and customer insights—without connecting any analytics tools."
     },
     {
       icon: CreditCard,
-      title: "One Dashboard for Everything",
-      description: "Payments, subscriptions, customer support, refunds, and disputes—all in one place. No tab-switching between tools."
+      title: "Everything in One Place",
+      description: "Payments, subscriptions, refunds, disputes, and customer support—all in one dashboard. No juggling between tools."
     }
   ];
 
