@@ -14,13 +14,12 @@ import {
   BarChart3
 } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []);
 
