@@ -133,11 +133,6 @@ export default function Home() {
               </Button>
             </form>
             <p className="text-sm text-muted-foreground mb-8">Join early access. No credit card required.</p>
-            <div className="flex gap-4 justify-center">
-              <Button size="lg" variant="outline" className="h-12 px-8 glass">
-                View Demo
-              </Button>
-            </div>
           </motion.div>
         </section>
 
