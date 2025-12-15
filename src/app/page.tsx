@@ -5,16 +5,17 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import {
-  Zap,
-  CreditCard,
+import { 
+  Zap, 
+  CreditCard, 
   ArrowRight,
   Check,
   Globe,
   Shield,
-  BarChart3 } from
-"lucide-react";
+  BarChart3
+} from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
@@ -54,14 +55,14 @@ export default function Home() {
   };
 
   const aiToolLogos = [
-  "Cursor",
-  "v0",
-  "Bolt",
-  "Replit",
-  "GitHub Copilot",
-  "Windsurf",
-  "Lovable"];
-
+    { name: "Cursor", logo: "https://cursor.sh/brand/icon.svg" },
+    { name: "v0", logo: "https://v0.dev/v0.svg" },
+    { name: "Bolt", logo: "https://bolt.new/social_preview_index.jpg" },
+    { name: "Replit", logo: "https://replit.com/public/images/logo-small.png" },
+    { name: "GitHub Copilot", logo: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" },
+    { name: "Windsurf", logo: "https://codeium.com/favicon.ico" },
+    { name: "Lovable", logo: "https://lovable.dev/favicon.svg" },
+  ];
 
   const features = [
   { icon: Zap, title: "Zero-Code Integration", desc: "Tell your AI what you want. No SDKs, no backend." },
@@ -167,33 +168,39 @@ export default function Home() {
           </div>
 
           <div className="relative max-w-5xl mx-auto overflow-hidden py-12">
-            <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-background to-transparent z-10 !w-[15%] !h-[178px]" />
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
             
             <motion.div
               className="flex gap-12 items-center"
               animate={{
-                x: [0, -1400]
+                x: [0, -1400],
               }}
               transition={{
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
                   duration: 25,
-                  ease: "linear"
-                }
-              }}>
-
-              {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) =>
-              <div
-                key={i}
-                className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center">
-
-                  <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    {tool}
-                  </span>
+                  ease: "linear",
+                },
+              }}
+            >
+              {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center"
+                >
+                  <div className="relative w-32 h-12 flex items-center justify-center">
+                    <Image
+                      src={tool.logo}
+                      alt={tool.name}
+                      width={128}
+                      height={48}
+                      className="object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                 </div>
-              )}
+              ))}
             </motion.div>
           </div>
         </section>
@@ -274,6 +281,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
