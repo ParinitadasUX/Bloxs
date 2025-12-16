@@ -13,7 +13,6 @@ import {
   Code2,
   CreditCard,
   Zap,
-  Terminal,
   CheckCircle2,
   Copy } from
 "lucide-react";
