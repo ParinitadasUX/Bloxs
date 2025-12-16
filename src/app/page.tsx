@@ -57,7 +57,7 @@ export default function Home() {
   {
     icon: Timer,
     title: "Handle subscriptions",
-    desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products."
+    desc: ""
   },
   {
     icon: CheckCircle2,
