@@ -415,9 +415,8 @@ export default function Home() {
                       {showPaymentUI && (
                       <motion.div
                       initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
                       className="relative">
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                         <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
