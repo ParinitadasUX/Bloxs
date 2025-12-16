@@ -14,7 +14,8 @@ import {
   CreditCard,
   Zap,
   CheckCircle2,
-  Copy } from
+  Copy,
+  Terminal } from
 "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
