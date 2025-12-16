@@ -110,7 +110,7 @@ export default function Home() {
 
             </p>
 
-            <p className="text-sm text-gray-500 !whitespace-pre-line mb-4">Join the waitlist to try the product free</p>
+            <p className="text-sm text-gray-500 !whitespace-pre-line mb-4">Join the waitlist to try the product</p>
 
             <form onSubmit={handleWaitlistSignup} className="max-w-md mx-auto mb-4">
               <div className="flex gap-3">
