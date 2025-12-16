@@ -300,6 +300,57 @@ export default function Home() {
                       </div>
                     </motion.div>
 
+                      {showMcpSetup && (
+                        <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="relative">
+                          <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                          <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                              <Terminal className="w-4 h-4 text-purple-400" />
+                              <span className="text-xs text-gray-400 font-mono">Setup BLOXS MCP</span>
+                            </div>
+                            
+                            <div className="p-6 space-y-4">
+                              <p className="text-xs text-gray-300 mb-3">Connect BLOXS to your AI tool using MCP</p>
+                              <div>
+                                <label className="text-xs text-gray-400 mb-1 block">MCP Server URL</label>
+                                <Input
+                                  type="text"
+                                  value="https://mcp.bloxs.io/connect"
+                                  readOnly
+                                  className="bg-white/5 border-white/10 text-white text-xs font-mono"
+                                />
+                              </div>
+                              <div>
+                                <label className="text-xs text-gray-400 mb-1 block">API Key</label>
+                                <Input
+                                  type="text"
+                                  value="bloxs_mcp_demo_key_12345"
+                                  readOnly
+                                  className="bg-white/5 border-white/10 text-white text-xs font-mono"
+                                />
+                              </div>
+                              <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-3">
+                                <p className="text-xs text-purple-300">Copy these credentials to your AI tool's MCP settings</p>
+                              </div>
+                              <Button
+                                onClick={() => {
+                                  setShowMcpSetup(false);
+                                  setShowDetailsForm(true);
+                                  toast.success("MCP Connected! Now enter your details");
+                                }}
+                                className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
+                              >
+                                Continue
+                              </Button>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+
                       {showDetailsForm && (
                         <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -310,7 +361,7 @@ export default function Home() {
                           <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                             <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
                               <Terminal className="w-4 h-4 text-purple-400" />
-                              <span className="text-xs text-gray-400 font-mono">Enter Details</span>
+                              <span className="text-xs text-gray-400 font-mono">Enter Payment Details</span>
                             </div>
                             
                             <div className="p-6 space-y-4">
@@ -348,17 +399,20 @@ export default function Home() {
                               </div>
                               <Button
                                 onClick={() => {
-                                  toast.success("Details saved! Setting up payments...");
+                                  setShowDetailsForm(false);
+                                  setShowPaymentUI(true);
+                                  toast.success("Details saved! Generating payment UI...");
                                 }}
                                 className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
                               >
-                                Continue Setup
+                                Generate Payment UI
                               </Button>
                             </div>
                           </div>
                         </motion.div>
                       )}
 
+                      {showPaymentUI && (
                       <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
