@@ -156,7 +156,7 @@ export default function Home() {
                   <feature.icon className="w-12 h-12 mb-6 text-white" strokeWidth={1.5} />
                   <div className="border-t border-white/10 mb-6"></div>
                   <h3 className="font-normal text-lg mb-3 text-white !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed !whitespace-pre-line">{feature.desc}</p>
                 </div>
               </motion.div>
             )}
