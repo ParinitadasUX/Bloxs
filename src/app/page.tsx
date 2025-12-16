@@ -26,6 +26,8 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const emailFormRef = useRef<HTMLFormElement>(null);
+  const [promptInput, setPromptInput] = useState("");
+  const [showDetailsForm, setShowDetailsForm] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
