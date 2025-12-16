@@ -26,8 +26,26 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const emailFormRef = useRef<HTMLFormElement>(null);
-  const [promptInput, setPromptInput] = useState("");
-  const [showPaymentUI, setShowPaymentUI] = useState(false);
+  
+  const [demoStep, setDemoStep] = useState<"select" | "subscription-form" | "feature-lock-form" | "generated">("select");
+  const [selectedPath, setSelectedPath] = useState<"subscription" | "feature-lock" | null>(null);
+  
+  const [subscriptionTiers, setSubscriptionTiers] = useState<Array<{
+    name: string;
+    price: string;
+    features: string[];
+  }>>([{ name: "", price: "", features: [""] }]);
+  
+  const [availableFeatures] = useState([
+    "Advanced Analytics",
+    "Team Collaboration", 
+    "Dark Mode",
+    "API Access",
+    "Priority Support",
+    "Custom Branding"
+  ]);
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+  const [featureLockTier, setFeatureLockTier] = useState<string>("Pro Plan");
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
