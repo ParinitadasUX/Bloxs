@@ -154,8 +154,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <div className="border-t border-white/10 pt-8">
+                <div>
                   <feature.icon className="w-12 h-12 mb-6 text-white" strokeWidth={1.5} />
+                  <div className="border-t border-white/10 mb-6"></div>
                   <h3 className="font-normal text-lg mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
                 </div>
