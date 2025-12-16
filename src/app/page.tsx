@@ -61,7 +61,7 @@ export default function Home() {
   { name: "Replit", logo: "/logos/replit.png" },
   { name: "GitHub Copilot", logo: "/logos/github.svg" },
   { name: "Windsurf", logo: "/logos/windsurf.svg" },
-  { name: "Lovable", logo: "/logos/lovable.svg" },
+  { name: "Lovable", logo: "/logos/lovable.png" },
   { name: "Figma", logo: "/logos/figma.svg" },
   { name: "Gemini", logo: "/logos/gemini.svg" },
   { name: "Perplexity", logo: "/logos/perplexity.svg" },
