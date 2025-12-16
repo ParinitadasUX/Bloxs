@@ -125,7 +125,7 @@ export default function Home() {
                 </Button>
               </div>
             </form>
-            <p className="text-sm text-gray-500"></p>
+            <p className="text-sm text-gray-500 !whitespace-pre-line"></p>
           </motion.div>
         </section>
 
