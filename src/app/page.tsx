@@ -643,20 +643,21 @@ export default function Home() {
         </div>
         </section>
 
-        <section id="features" className="px-6 py-32 max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-normal mb-6">
-              The <span className="text-gray-400">Vibe</span> Coder's Dilemma
-            </h2>
-            <p className="text-base text-gray-400 max-w-3xl leading-relaxed !whitespace-pre-line">Your AI nails the prototype and users want it but when it's time to charge, subscriptions get messy, legal questions creep in, and momentum slows. Bloxs helps you understand what matters when money flows from billing setup to basic legal readiness.
+          <section id="features" className="px-6 py-32 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-20">
+              <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">The Vibe Coder's Dilemma</Badge>
+              <h2 className="text-3xl md:text-4xl font-normal mb-6">
+                The <span className="text-gray-400">Vibe</span> Coder's Dilemma
+              </h2>
+              <p className="text-base text-gray-400 max-w-3xl leading-relaxed !whitespace-pre-line">Your AI nails the prototype and users want it but when it's time to charge, subscriptions get messy, legal questions creep in, and momentum slows. Bloxs helps you understand what matters when money flows from billing setup to basic legal readiness.
 
-            </p>
-          </motion.div>
+              </p>
+            </motion.div>
 
           <div className="grid md:grid-cols-3 gap-12">
             {features.map((feature, i) =>
