@@ -253,20 +253,7 @@ export default function Home() {
                   ))}
                 </div>
 
-                  <div className="pt-4">
-                    <p className="text-sm text-gray-500 mb-3">Example prompt:</p>
-                    <div className="bg-[#1A1A23] border border-white/10 rounded-lg overflow-hidden">
-                      <div className="flex items-center gap-2 px-4 py-2 border-b border-white/10 bg-white/[0.02]">
-                        <Terminal className="w-3.5 h-3.5 text-gray-400" />
-                        <span className="text-xs text-gray-400 font-mono">prompt</span>
-                      </div>
-                      <div className="p-4">
-                        <p className="text-purple-300 font-mono text-sm">
-                          "Add monthly subscription pricing with $29/mo and $99/mo tiers"
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+
               </motion.div>
 
               <motion.div
