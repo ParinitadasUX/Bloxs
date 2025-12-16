@@ -106,9 +106,12 @@ export default function Home() {
       <nav className="relative z-10 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
               <div className="w-4 h-4 bg-[#0B0B0F] rounded-sm"></div>
-            </div>
+            </motion.div>
             <span className="font-semibold text-base">bloxs</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
@@ -272,9 +275,12 @@ export default function Home() {
       <footer className="relative z-10 border-t border-white/5 px-6 py-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm text-gray-500">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
               <div className="w-3 h-3 bg-[#0B0B0F] rounded-sm"></div>
-            </div>
+            </motion.div>
             <span className="font-semibold">bloxs</span>
           </div>
           <div className="flex gap-8">
