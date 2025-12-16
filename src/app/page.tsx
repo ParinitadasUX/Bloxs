@@ -61,7 +61,7 @@ export default function Home() {
   },
   {
     icon: CheckCircle2,
-    title: "Break through with our Vibe Coding Toolkit",
+    title: "Legal clarity, not confusion",
     desc: "Tools, articles, and other resources to help you deploy your application to production with confidence."
   }];
 
