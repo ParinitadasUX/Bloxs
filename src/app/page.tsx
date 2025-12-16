@@ -147,7 +147,7 @@ export default function Home() {
         </section>
 
         <section className="px-6 py-24 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature, i) => (
               <motion.div
                 key={i}
