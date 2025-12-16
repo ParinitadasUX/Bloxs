@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Zap,
-  CheckCircle2,
+  Gavel,
   CalendarHeart } from
 "lucide-react";
 import Link from "next/link";
@@ -60,7 +60,7 @@ export default function Home() {
     desc: "Bloxs manage upgrades, cancellations, renewals, and failed payments for you."
   },
   {
-    icon: CheckCircle2,
+    icon: Gavel,
     title: "Legal clarity, not confusion",
     desc: "Bloxs surfaces the right legal and tax steps when you start charging without jargon or overwhelm."
   }];
