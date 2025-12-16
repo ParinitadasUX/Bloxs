@@ -7,14 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Zap,
-  Timer,
-  CheckCircle2,
-  Database,
-  Lock,
-  Palette,
-  CreditCard,
-  Sparkles,
-  Rocket
+  Shield,
+  Globe,
+  BarChart3,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +38,7 @@ export default function Home() {
       const data = await res.json();
 
       if (res.ok) {
-        toast.success('You\'re on the waitlist! We\'ll notify you when we launch.');
+        toast.success('You\'re on the waitlist!');
         setEmail("");
       } else {
         toast.error(data.error || 'Something went wrong');
@@ -58,44 +53,42 @@ export default function Home() {
   const features = [
     { 
       icon: Zap, 
-      title: "Build with AI Power", 
-      desc: "Leverage cutting-edge AI tools to prototype, develop, and ship production-ready applications faster than ever." 
+      title: "Zero-Code Integration", 
+      desc: "Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics." 
     },
     { 
-      icon: Timer, 
-      title: "Ship in Record Time", 
-      desc: "From idea to launch in days, not months. AI-powered development workflow that scales with your ambition." 
+      icon: Shield, 
+      title: "Security Handled", 
+      desc: "PCI-DSS, GDPR, SOC 2 compliant automatically." 
     },
     { 
-      icon: CheckCircle2, 
-      title: "Production-Ready Stack", 
-      desc: "Pre-configured backend, database, auth, and deployment tools so you can focus on building features users love." 
+      icon: Globe, 
+      title: "Global Tax Autopilot", 
+      desc: "Automatic sales tax, VAT, GST for 190+ countries." 
+    },
+    { 
+      icon: BarChart3, 
+      title: "Analytics Built-In", 
+      desc: "Revenue, MRR, churn tracking in one place." 
     }
-  ];
-
-  const integrations = [
-    { icon: Database, name: "Supabase", desc: "PostgreSQL database with real-time capabilities" },
-    { icon: Lock, name: "Auth", desc: "Complete authentication with social providers" },
-    { icon: Palette, name: "UI Components", desc: "Beautiful, accessible component library" },
-    { icon: CreditCard, name: "Stripe", desc: "Payments and subscription management" },
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
-      period: "/month",
-      desc: "Perfect for solo developers building side projects",
-      features: ["5 Projects", "AI-powered dev tools", "Community support", "Basic analytics"],
-      cta: "Start Building"
+      price: "Free",
+      period: "forever",
+      desc: "Up to $10k/month",
+      features: ["2.5% + 25¢ per transaction", "Up to $10k/month", "Basic tax US only", "Email support"],
+      cta: "Get Started"
     },
     {
       name: "Pro",
-      price: "$79",
+      price: "$49",
       period: "/month",
-      desc: "For professional developers shipping products",
-      features: ["Unlimited projects", "Advanced AI features", "Priority support", "Advanced analytics", "Custom domains", "Team collaboration"],
-      cta: "Go Pro",
+      desc: "Scale as you grow",
+      features: ["2.5% + 25¢ per transaction", "Unlimited volume", "Global tax automation", "GDPR tax automation", "Priority support", "Custom branding"],
+      cta: "Start Trial",
       popular: true
     },
     {
@@ -103,67 +96,84 @@ export default function Home() {
       price: "Custom",
       period: "",
       desc: "For teams and organizations at scale",
-      features: ["Everything in Pro", "Dedicated support", "Custom integrations", "SLA guarantees", "Advanced security", "Training & onboarding"],
-      cta: "Contact Sales"
+      features: ["Custom rates", "Dedicated advisor", "Tax filing TPA", "SLA guarantees", "Advanced security", "Training & onboarding"],
+      cta: "Get Started"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-foreground relative overflow-hidden">
-      <nav className="relative z-10 border-b border-border/50 backdrop-blur-xl">
+    <div className="min-h-screen bg-[#0B0B0F] text-foreground relative overflow-hidden">
+      <nav className="relative z-10 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/bloxs-logo.png"
-              alt="bloxs logo"
-              width={32}
-              height={32}
-              className="w-8 h-8" />
-            <span className="font-semibold text-lg">bloxs</span>
+            <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+              <div className="w-4 h-4 bg-[#0B0B0F] rounded-sm"></div>
+            </div>
+            <span className="font-semibold text-base">bloxs</span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm">
-            <Link href="#features" className="hover:text-primary transition-colors">Features</Link>
-            <Link href="#integration" className="hover:text-primary transition-colors">Integration</Link>
-            <Link href="#pricing" className="hover:text-primary transition-colors">Pricing</Link>
+          <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
+            <Link href="#features" className="hover:text-white transition-colors">Features</Link>
+            <Link href="#integration" className="hover:text-white transition-colors">Integration</Link>
+            <Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link>
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm">Sign in</Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">Get Started</Button>
+            <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">Sign in</Button>
+            <Button size="sm" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-lg">Get Started</Button>
           </div>
         </div>
       </nav>
 
       <main className="relative z-10">
-        <section className="px-6 py-24 max-w-6xl mx-auto">
+        <section className="px-6 py-32 max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
             
-            <h1 className="text-5xl md:text-6xl font-medium mb-8 leading-tight text-gray-300">
-              For <span className="text-white font-semibold">AI Builders</span> Who Ship
+            <Badge className="mb-6 bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs px-3 py-1">
+              Payment infrastructure
+            </Badge>
+
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+              Payments for<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">AI-first builders</span>
             </h1>
             
-            <div className="space-y-2 text-lg text-gray-400 max-w-3xl leading-relaxed">
-              <p>Build with AI. Ship to production. Scale with confidence.</p>
-              <p>The complete toolkit for developers who use AI to build real products.</p>
-              <p>No more cobbling together tools. Everything you need, ready to go.</p>
-            </div>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+              Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics.
+            </p>
+
+            <form onSubmit={handleWaitlistSignup} className="max-w-md mx-auto mb-4">
+              <div className="flex gap-3">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 h-12"
+                />
+                <Button type="submit" disabled={isSubmitting} className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white whitespace-nowrap h-12 px-6 rounded-lg">
+                  Join Waitlist
+                </Button>
+              </div>
+            </form>
+            <p className="text-sm text-gray-500">Join early access. No credit card required.</p>
           </motion.div>
         </section>
 
-        <section className="px-6 py-24 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+        <section className="px-6 py-16 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-6">
             {features.map((feature, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card className="p-8 bg-[#111] border-border/50 h-full">
-                  <feature.icon className="w-12 h-12 mb-6 text-primary" strokeWidth={1.5} />
-                  <h3 className="font-semibold text-xl mb-4">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                <Card className="p-6 bg-white/[0.02] border-white/10 h-full hover:bg-white/[0.04] transition-colors">
+                  <feature.icon className="w-10 h-10 mb-4 text-purple-400" strokeWidth={1.5} />
+                  <h3 className="font-semibold text-base mb-2 text-white">{feature.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
                 </Card>
               </motion.div>
             ))}
@@ -175,33 +185,18 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}>
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Integrations</Badge>
-            <h2 className="text-4xl font-semibold mb-4 text-white">Everything You Need, Pre-configured</h2>
-            <p className="text-lg text-gray-400 mb-12 max-w-2xl">Stop wasting time on boilerplate. We've integrated the best tools so you can focus on shipping.</p>
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16">
+            <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs">Integration</Badge>
+            <h2 className="text-4xl font-bold mb-4 text-white">Works with your AI tool</h2>
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">Just prompt. No code required.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {integrations.map((integration, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card className="p-6 bg-[#111] border-border/50 hover:border-primary/30 transition-colors">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                      <integration.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">{integration.name}</h3>
-                      <p className="text-muted-foreground text-sm">{integration.desc}</p>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-60">
+            <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
+            <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
+            <Image src="/logos/lovable.svg" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
+            <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
           </div>
         </section>
 
@@ -212,12 +207,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Pricing</Badge>
-            <h2 className="text-4xl font-semibold mb-4 text-white">Build More, Pay Less</h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">Choose the plan that fits your ambition. All plans include core AI building tools.</p>
+            <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs">Pricing</Badge>
+            <h2 className="text-4xl font-bold mb-4 text-white">Simple pricing</h2>
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">Start free. Scale as you grow.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {pricingPlans.map((plan, i) => (
               <motion.div
                 key={i}
@@ -225,28 +220,30 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card className={`p-8 bg-[#111] border-border/50 h-full relative ${plan.popular ? 'border-primary/50' : ''}`}>
+                <Card className={`p-8 bg-white/[0.02] border-white/10 h-full relative hover:bg-white/[0.04] transition-colors ${plan.popular ? 'border-purple-500/50 bg-white/[0.04]' : ''}`}>
                   {plan.popular && (
-                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground">
+                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8B5CF6] text-white border-0">
                       Most Popular
                     </Badge>
                   )}
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-semibold mb-2">{plan.name}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">{plan.desc}</p>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-muted-foreground">{plan.period}</span>
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold mb-2 text-white">{plan.name}</h3>
+                    <div className="flex items-baseline gap-1 mb-2">
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      {plan.period && <span className="text-gray-400">{plan.period}</span>}
                     </div>
+                    <p className="text-gray-400 text-sm">{plan.desc}</p>
                   </div>
-                  <Button className={`w-full mb-6 ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`} variant={plan.popular ? 'default' : 'outline'}>
+                  <Button className={`w-full mb-6 h-11 rounded-lg ${plan.popular ? 'bg-[#8B5CF6] hover:bg-[#7C3AED] text-white' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'}`}>
                     {plan.cta}
                   </Button>
                   <ul className="space-y-3">
                     {plan.features.map((feature, fi) => (
-                      <li key={fi} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
+                      <li key={fi} className="flex items-start gap-3 text-sm">
+                        <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -261,54 +258,29 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}>
-            <Card className="p-12 bg-gradient-to-br from-primary/10 via-[#111] to-[#111] border-primary/20">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                  <Rocket className="w-8 h-8 text-primary" />
-                </div>
-                <h2 className="text-3xl font-semibold mb-4 text-white">Ready to Ship Faster?</h2>
-                <p className="text-lg text-gray-400 max-w-xl mx-auto">Join the waitlist and be the first to access the complete AI builder toolkit.</p>
-              </div>
-              <form onSubmit={handleWaitlistSignup} className="max-w-md mx-auto">
-                <div className="flex gap-3">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="bg-[#0a0a0a] border-border/50 focus:border-primary"
-                  />
-                  <Button type="submit" disabled={isSubmitting} className="bg-primary hover:bg-primary/90 whitespace-nowrap">
-                    {isSubmitting ? (
-                      <Sparkles className="w-4 h-4 animate-spin" />
-                    ) : (
-                      'Join Waitlist'
-                    )}
-                  </Button>
-                </div>
-              </form>
-            </Card>
+            transition={{ duration: 0.6 }}
+            className="text-center">
+            <h2 className="text-4xl font-bold mb-4 text-white">Start accepting payments</h2>
+            <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto">Join thousands shipping faster.</p>
+            <Button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base">
+              Get Started Free
+            </Button>
           </motion.div>
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-border/50 backdrop-blur-xl px-6 py-12">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <footer className="relative z-10 border-t border-white/5 px-6 py-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-sm text-gray-500">
           <div className="flex items-center gap-2">
-            <Image
-              src="/bloxs-logo.png"
-              alt="bloxs logo"
-              width={32}
-              height={32}
-              className="w-8 h-8" />
+            <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
+              <div className="w-3 h-3 bg-[#0B0B0F] rounded-sm"></div>
+            </div>
             <span className="font-semibold">bloxs</span>
           </div>
-          <div className="flex gap-8 text-sm text-muted-foreground">
-            <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-foreground transition-colors">Terms</Link>
-            <Link href="#" className="hover:text-foreground transition-colors">Docs</Link>
+          <div className="flex gap-8">
+            <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="#" className="hover:text-white transition-colors">Docs</Link>
           </div>
         </div>
       </footer>
