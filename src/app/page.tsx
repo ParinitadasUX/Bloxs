@@ -26,24 +26,24 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const emailFormRef = useRef<HTMLFormElement>(null);
-  
+
   const [demoStep, setDemoStep] = useState<"select" | "subscription-form" | "feature-lock-form" | "generated">("select");
   const [selectedPath, setSelectedPath] = useState<"subscription" | "feature-lock" | null>(null);
-  
+
   const [subscriptionTiers, setSubscriptionTiers] = useState<Array<{
     name: string;
     price: string;
     features: string[];
   }>>([{ name: "", price: "", features: [""] }]);
-  
+
   const [availableFeatures] = useState([
-    "Advanced Analytics",
-    "Team Collaboration", 
-    "Dark Mode",
-    "API Access",
-    "Priority Support",
-    "Custom Branding"
-  ]);
+  "Advanced Analytics",
+  "Team Collaboration",
+  "Dark Mode",
+  "API Access",
+  "Priority Support",
+  "Custom Branding"]
+  );
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
   const [featureLockTier, setFeatureLockTier] = useState<string>("Pro Plan");
 
@@ -246,7 +246,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20">
                 <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
-                <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line">Simple prompt, production ready</h2>
+                <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line">Simple prompt to production ready</h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
             </motion.div>
 
@@ -274,32 +274,32 @@ export default function Home() {
                 </svg>
 
                   {[
-                {
-                  icon: Sparkles,
-                  title: "One-time",
-                  badge: "Popular",
-                  desc: "Single payment checkout with automated receipt generation and tax calculation."
-                },
-                {
-                  icon: CheckCircle2,
-                  title: "Subscription",
-                  badge: "Best Value",
-                  desc: "Recurring billing with automatic renewals, upgrade/downgrade flows, and failed payment handling."
-                },
-                {
-                  icon: Terminal,
-                  title: "Usage-based",
-                  badge: "Flexible",
-                  desc: "Metered billing based on consumption with real-time usage tracking and threshold alerts."
-                }].
-                map((item, i) =>
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                  className="relative z-10 group">
+              {
+                icon: Sparkles,
+                title: "One-time",
+                badge: "Popular",
+                desc: "Single payment checkout with automated receipt generation and tax calculation."
+              },
+              {
+                icon: CheckCircle2,
+                title: "Subscription",
+                badge: "Best Value",
+                desc: "Recurring billing with automatic renewals, upgrade/downgrade flows, and failed payment handling."
+              },
+              {
+                icon: Terminal,
+                title: "Usage-based",
+                badge: "Flexible",
+                desc: "Metered billing based on consumption with real-time usage tracking and threshold alerts."
+              }].
+              map((item, i) =>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                className="relative z-10 group">
                       <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05] h-full">
                         <div className="flex items-center justify-between mb-6">
                           <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-purple-500/10 border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
@@ -311,7 +311,7 @@ export default function Home() {
                         <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </motion.div>
-                )}
+              )}
               </div>
 
               <motion.div
@@ -342,13 +342,13 @@ export default function Home() {
                 </motion.div>
 
               <div className="space-y-6">
-{demoStep === "select" && (
-                    <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="relative">
+                {demoStep === "select" &&
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                       <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
@@ -357,12 +357,12 @@ export default function Home() {
                         </div>
                         
                         <div className="p-6 space-y-3">
-                          <button 
-                            onClick={() => {
-                              setSelectedPath("subscription");
-                              setDemoStep("subscription-form");
-                            }}
-                            className="w-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-4 text-left transition-all group">
+                          <button
+                        onClick={() => {
+                          setSelectedPath("subscription");
+                          setDemoStep("subscription-form");
+                        }}
+                        className="w-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-4 text-left transition-all group">
                             <div className="flex items-center gap-3">
                               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
                                 <CheckCircle2 className="w-5 h-5 text-purple-400" />
@@ -374,12 +374,12 @@ export default function Home() {
                             </div>
                           </button>
 
-                          <button 
-                            onClick={() => {
-                              setSelectedPath("feature-lock");
-                              setDemoStep("feature-lock-form");
-                            }}
-                            className="w-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-4 text-left transition-all group">
+                          <button
+                        onClick={() => {
+                          setSelectedPath("feature-lock");
+                          setDemoStep("feature-lock-form");
+                        }}
+                        className="w-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-4 text-left transition-all group">
                             <div className="flex items-center gap-3">
                               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
                                 <Terminal className="w-5 h-5 text-purple-400" />
@@ -393,14 +393,14 @@ export default function Home() {
                         </div>
                       </div>
                     </motion.div>
-                  )}
+                }
 
-                  {demoStep === "subscription-form" && (
-                    <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative">
+                  {demoStep === "subscription-form" &&
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                       <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
@@ -409,126 +409,126 @@ export default function Home() {
                         </div>
                         
                         <div className="p-6 space-y-6 max-h-96 overflow-y-auto">
-                          {subscriptionTiers.map((tier, tierIdx) => (
-                            <div key={tierIdx} className="space-y-3 pb-6 border-b border-white/10 last:border-b-0">
+                          {subscriptionTiers.map((tier, tierIdx) =>
+                      <div key={tierIdx} className="space-y-3 pb-6 border-b border-white/10 last:border-b-0">
                               <div className="flex items-center justify-between">
                                 <span className="text-xs font-semibold text-purple-400">Tier {tierIdx + 1}</span>
-                                {subscriptionTiers.length > 1 && (
-                                  <button 
-                                    onClick={() => setSubscriptionTiers(subscriptionTiers.filter((_, i) => i !== tierIdx))}
-                                    className="text-xs text-gray-500 hover:text-red-400 transition-colors">
+                                {subscriptionTiers.length > 1 &&
+                          <button
+                            onClick={() => setSubscriptionTiers(subscriptionTiers.filter((_, i) => i !== tierIdx))}
+                            className="text-xs text-gray-500 hover:text-red-400 transition-colors">
                                     Remove
                                   </button>
-                                )}
+                          }
                               </div>
                               
                               <Input
-                                placeholder="Tier name (e.g., Basic, Pro)"
-                                value={tier.name}
-                                onChange={(e) => {
-                                  const updated = [...subscriptionTiers];
-                                  updated[tierIdx].name = e.target.value;
-                                  setSubscriptionTiers(updated);
-                                }}
-                                className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs" />
+                          placeholder="Tier name (e.g., Basic, Pro)"
+                          value={tier.name}
+                          onChange={(e) => {
+                            const updated = [...subscriptionTiers];
+                            updated[tierIdx].name = e.target.value;
+                            setSubscriptionTiers(updated);
+                          }}
+                          className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs" />
 
                               <div className="flex gap-2">
                                 <div className="relative flex-1">
                                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
                                   <Input
-                                    placeholder="29"
-                                    type="number"
-                                    value={tier.price}
-                                    onChange={(e) => {
-                                      const updated = [...subscriptionTiers];
-                                      updated[tierIdx].price = e.target.value;
-                                      setSubscriptionTiers(updated);
-                                    }}
-                                    className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs pl-7" />
+                              placeholder="29"
+                              type="number"
+                              value={tier.price}
+                              onChange={(e) => {
+                                const updated = [...subscriptionTiers];
+                                updated[tierIdx].price = e.target.value;
+                                setSubscriptionTiers(updated);
+                              }}
+                              className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs pl-7" />
                                 </div>
                                 <span className="text-xs text-gray-400 flex items-center">/month</span>
                               </div>
 
                               <div className="space-y-2">
                                 <label className="text-xs text-gray-400">Features:</label>
-                                {tier.features.map((feature, featIdx) => (
-                                  <div key={featIdx} className="flex gap-2">
+                                {tier.features.map((feature, featIdx) =>
+                          <div key={featIdx} className="flex gap-2">
                                     <Input
-                                      placeholder="e.g., Email support"
-                                      value={feature}
-                                      onChange={(e) => {
-                                        const updated = [...subscriptionTiers];
-                                        updated[tierIdx].features[featIdx] = e.target.value;
-                                        setSubscriptionTiers(updated);
-                                      }}
-                                      className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs flex-1" />
-                                    {tier.features.length > 1 && (
-                                      <button 
-                                        onClick={() => {
-                                          const updated = [...subscriptionTiers];
-                                          updated[tierIdx].features = updated[tierIdx].features.filter((_, i) => i !== featIdx);
-                                          setSubscriptionTiers(updated);
-                                        }}
-                                        className="text-xs text-gray-500 hover:text-red-400 px-2">
+                              placeholder="e.g., Email support"
+                              value={feature}
+                              onChange={(e) => {
+                                const updated = [...subscriptionTiers];
+                                updated[tierIdx].features[featIdx] = e.target.value;
+                                setSubscriptionTiers(updated);
+                              }}
+                              className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs flex-1" />
+                                    {tier.features.length > 1 &&
+                            <button
+                              onClick={() => {
+                                const updated = [...subscriptionTiers];
+                                updated[tierIdx].features = updated[tierIdx].features.filter((_, i) => i !== featIdx);
+                                setSubscriptionTiers(updated);
+                              }}
+                              className="text-xs text-gray-500 hover:text-red-400 px-2">
                                         ×
                                       </button>
-                                    )}
+                            }
                                   </div>
-                                ))}
+                          )}
                                 <button
-                                  onClick={() => {
-                                    const updated = [...subscriptionTiers];
-                                    updated[tierIdx].features.push("");
-                                    setSubscriptionTiers(updated);
-                                  }}
-                                  className="text-xs text-purple-400 hover:text-purple-300 transition-colors">
+                            onClick={() => {
+                              const updated = [...subscriptionTiers];
+                              updated[tierIdx].features.push("");
+                              setSubscriptionTiers(updated);
+                            }}
+                            className="text-xs text-purple-400 hover:text-purple-300 transition-colors">
                                   + Add feature
                                 </button>
                               </div>
                             </div>
-                          ))}
+                      )}
 
                           <button
-                            onClick={() => setSubscriptionTiers([...subscriptionTiers, { name: "", price: "", features: [""] }])}
-                            className="w-full bg-white/5 border border-white/10 hover:bg-white/10 text-purple-400 text-xs py-2 rounded transition-colors">
+                        onClick={() => setSubscriptionTiers([...subscriptionTiers, { name: "", price: "", features: [""] }])}
+                        className="w-full bg-white/5 border border-white/10 hover:bg-white/10 text-purple-400 text-xs py-2 rounded transition-colors">
                             + Add Another Tier
                           </button>
                         </div>
 
                         <div className="p-4 border-t border-white/10 flex gap-2">
                           <Button
-                            onClick={() => {
-                              setDemoStep("select");
-                              setSubscriptionTiers([{ name: "", price: "", features: [""] }]);
-                            }}
-                            variant="ghost"
-                            className="flex-1 text-gray-400 text-xs py-2">
+                        onClick={() => {
+                          setDemoStep("select");
+                          setSubscriptionTiers([{ name: "", price: "", features: [""] }]);
+                        }}
+                        variant="ghost"
+                        className="flex-1 text-gray-400 text-xs py-2">
                             Back
                           </Button>
                           <Button
-                            onClick={() => {
-                              const hasValidTier = subscriptionTiers.some(t => t.name && t.price);
-                              if (hasValidTier) {
-                                setDemoStep("generated");
-                                toast.success("Generating payment UI...");
-                              } else {
-                                toast.error("Please fill in at least one tier");
-                              }
-                            }}
-                            className="flex-1 bg-purple-500 hover:bg-purple-600 text-white text-xs py-2">
+                        onClick={() => {
+                          const hasValidTier = subscriptionTiers.some((t) => t.name && t.price);
+                          if (hasValidTier) {
+                            setDemoStep("generated");
+                            toast.success("Generating payment UI...");
+                          } else {
+                            toast.error("Please fill in at least one tier");
+                          }
+                        }}
+                        className="flex-1 bg-purple-500 hover:bg-purple-600 text-white text-xs py-2">
                             Generate UI
                           </Button>
                         </div>
                       </div>
                     </motion.div>
-                  )}
+                }
 
-                  {demoStep === "feature-lock-form" && (
-                    <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative">
+                  {demoStep === "feature-lock-form" &&
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                       <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
@@ -540,31 +540,31 @@ export default function Home() {
                           <div className="space-y-2">
                             <label className="text-xs text-gray-400">Which features to lock?</label>
                             <div className="space-y-2">
-                              {availableFeatures.map((feature) => (
-                                <label key={feature} className="flex items-center gap-3 p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all cursor-pointer">
+                              {availableFeatures.map((feature) =>
+                          <label key={feature} className="flex items-center gap-3 p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all cursor-pointer">
                                   <input
-                                    type="checkbox"
-                                    checked={selectedFeatures.includes(feature)}
-                                    onChange={(e) => {
-                                      if (e.target.checked) {
-                                        setSelectedFeatures([...selectedFeatures, feature]);
-                                      } else {
-                                        setSelectedFeatures(selectedFeatures.filter(f => f !== feature));
-                                      }
-                                    }}
-                                    className="w-4 h-4 rounded border-white/20 bg-white/5 checked:bg-purple-500" />
+                              type="checkbox"
+                              checked={selectedFeatures.includes(feature)}
+                              onChange={(e) => {
+                                if (e.target.checked) {
+                                  setSelectedFeatures([...selectedFeatures, feature]);
+                                } else {
+                                  setSelectedFeatures(selectedFeatures.filter((f) => f !== feature));
+                                }
+                              }}
+                              className="w-4 h-4 rounded border-white/20 bg-white/5 checked:bg-purple-500" />
                                   <span className="text-xs text-white">{feature}</span>
                                 </label>
-                              ))}
+                          )}
                             </div>
                           </div>
 
                           <div className="space-y-2">
                             <label className="text-xs text-gray-400">Unlock with:</label>
                             <select
-                              value={featureLockTier}
-                              onChange={(e) => setFeatureLockTier(e.target.value)}
-                              className="w-full bg-white/5 border border-white/10 focus:border-purple-500 text-white text-xs rounded-lg p-3">
+                          value={featureLockTier}
+                          onChange={(e) => setFeatureLockTier(e.target.value)}
+                          className="w-full bg-white/5 border border-white/10 focus:border-purple-500 text-white text-xs rounded-lg p-3">
                               <option value="Pro Plan">Pro Plan</option>
                               <option value="Premium Plan">Premium Plan</option>
                               <option value="Enterprise Plan">Enterprise Plan</option>
@@ -574,37 +574,37 @@ export default function Home() {
 
                         <div className="p-4 border-t border-white/10 flex gap-2">
                           <Button
-                            onClick={() => {
-                              setDemoStep("select");
-                              setSelectedFeatures([]);
-                            }}
-                            variant="ghost"
-                            className="flex-1 text-gray-400 text-xs py-2">
+                        onClick={() => {
+                          setDemoStep("select");
+                          setSelectedFeatures([]);
+                        }}
+                        variant="ghost"
+                        className="flex-1 text-gray-400 text-xs py-2">
                             Back
                           </Button>
                           <Button
-                            onClick={() => {
-                              if (selectedFeatures.length > 0) {
-                                setDemoStep("generated");
-                                toast.success("Generating feature gates...");
-                              } else {
-                                toast.error("Please select at least one feature");
-                              }
-                            }}
-                            className="flex-1 bg-purple-500 hover:bg-purple-600 text-white text-xs py-2">
+                        onClick={() => {
+                          if (selectedFeatures.length > 0) {
+                            setDemoStep("generated");
+                            toast.success("Generating feature gates...");
+                          } else {
+                            toast.error("Please select at least one feature");
+                          }
+                        }}
+                        className="flex-1 bg-purple-500 hover:bg-purple-600 text-white text-xs py-2">
                             Generate UI
                           </Button>
                         </div>
                       </div>
                     </motion.div>
-                  )}
+                }
 
-                  {demoStep === "generated" && (
-                    <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative">
+                  {demoStep === "generated" &&
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                       <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
@@ -612,24 +612,24 @@ export default function Home() {
                           <span className="text-xs text-gray-400 font-mono">
                             {selectedPath === "subscription" ? "Generated Subscription UI" : "Generated Feature Lock UI"}
                           </span>
-                          <button 
-                            onClick={() => {
-                              setDemoStep("select");
-                              setSubscriptionTiers([{ name: "", price: "", features: [""] }]);
-                              setSelectedFeatures([]);
-                            }}
-                            className="ml-auto text-xs text-purple-400 hover:text-purple-300 transition-colors">
+                          <button
+                        onClick={() => {
+                          setDemoStep("select");
+                          setSubscriptionTiers([{ name: "", price: "", features: [""] }]);
+                          setSelectedFeatures([]);
+                        }}
+                        className="ml-auto text-xs text-purple-400 hover:text-purple-300 transition-colors">
                             Reset
                           </button>
                         </div>
                         
                         <div className="p-6 space-y-4 max-h-96 overflow-y-auto">
-                          {selectedPath === "subscription" && (
-                            <div className="grid grid-cols-2 gap-3">
-                              {subscriptionTiers.filter(t => t.name && t.price).map((tier, idx) => (
-                                <div 
-                                  key={idx}
-                                  className={`${idx === 0 ? 'bg-white/5 border border-white/10' : 'bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/40'} rounded-lg p-4 hover:border-purple-500/50 transition-all cursor-pointer group relative overflow-hidden`}>
+                          {selectedPath === "subscription" &&
+                      <div className="grid grid-cols-2 gap-3">
+                              {subscriptionTiers.filter((t) => t.name && t.price).map((tier, idx) =>
+                        <div
+                          key={idx}
+                          className={`${idx === 0 ? 'bg-white/5 border border-white/10' : 'bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/40'} rounded-lg p-4 hover:border-purple-500/50 transition-all cursor-pointer group relative overflow-hidden`}>
                                   {idx > 0 && <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/20 rounded-full blur-2xl"></div>}
                                   <div className="flex items-center justify-between mb-2 relative z-10">
                                     <span className="text-sm font-semibold text-white">{tier.name}</span>
@@ -642,23 +642,23 @@ export default function Home() {
                                     <span className={`text-xs ${idx === 0 ? 'text-gray-400' : 'text-gray-300'}`}>/month</span>
                                   </div>
                                   <ul className="space-y-1.5 mb-4 relative z-10">
-                                    {tier.features.filter(f => f.trim()).map((feature, featIdx) => (
-                                      <li key={featIdx} className={`flex items-center gap-2 text-xs ${idx === 0 ? 'text-gray-300' : 'text-gray-200'}`}>
+                                    {tier.features.filter((f) => f.trim()).map((feature, featIdx) =>
+                            <li key={featIdx} className={`flex items-center gap-2 text-xs ${idx === 0 ? 'text-gray-300' : 'text-gray-200'}`}>
                                         <CheckCircle2 className={`w-3 h-3 ${idx === 0 ? 'text-purple-400' : 'text-purple-300'} flex-shrink-0`} />
                                         <span>{feature}</span>
                                       </li>
-                                    ))}
+                            )}
                                   </ul>
                                   <button className={`w-full ${idx === 0 ? 'bg-white/10 hover:bg-white/20 group-hover:bg-purple-500' : 'bg-purple-500 hover:bg-purple-600 group-hover:bg-purple-400'} text-white text-xs py-2 rounded transition-colors relative z-10`}>
                                     Select {tier.name}
                                   </button>
                                 </div>
-                              ))}
+                        )}
                             </div>
-                          )}
+                      }
 
-                          {selectedPath === "feature-lock" && (
-                            <div className="space-y-3">
+                          {selectedPath === "feature-lock" &&
+                      <div className="space-y-3">
                               <div className="bg-white/5 border border-white/10 rounded-lg p-4">
                                 <div className="flex items-center justify-between mb-3">
                                   <span className="text-sm font-semibold text-white">Locked Features</span>
@@ -667,12 +667,12 @@ export default function Home() {
                                   </Badge>
                                 </div>
                                 <div className="space-y-2">
-                                  {selectedFeatures.map((feature) => (
-                                    <div key={feature} className="flex items-center justify-between p-2 bg-white/5 rounded border border-white/10">
+                                  {selectedFeatures.map((feature) =>
+                            <div key={feature} className="flex items-center justify-between p-2 bg-white/5 rounded border border-white/10">
                                       <span className="text-xs text-gray-300">{feature}</span>
                                       <Gavel className="w-4 h-4 text-purple-400" />
                                     </div>
-                                  ))}
+                            )}
                                 </div>
                               </div>
                               <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/40 rounded-lg p-4">
@@ -683,11 +683,11 @@ export default function Home() {
                                 </button>
                               </div>
                             </div>
-                          )}
+                      }
                         </div>
                       </div>
                     </motion.div>
-                  )}
+                }
                 </div>
             </div>
           </div>
