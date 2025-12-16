@@ -178,96 +178,19 @@ export default function Home() {
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
             </motion.div>
 
-            <div className="relative max-w-5xl mx-auto mb-20">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                <svg className="hidden md:block absolute top-1/2 left-0 w-full h-24 -translate-y-1/2 pointer-events-none z-0" viewBox="0 0 800 100" preserveAspectRatio="none">
-                  <motion.path
-                  d="M 100 50 L 350 50 M 450 50 L 700 50"
-                  stroke="url(#gradient)"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeDasharray="5,5"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 2, ease: "easeInOut" }} />
-
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.3" />
-                      <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.3" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-
-                  {[
-              {
-                icon: Code2,
-                title: "Connect through MCP",
-                badge: "Simple",
-                desc: "Bloxs connects to your AI tool via Model Context Protocol. One-time setup gives your AI native access to payment infrastructure."
-              },
-              {
-                icon: Sparkles,
-                title: "Prompt in your fav AI tool",
-                badge: "Natural",
-                desc: "Describe what you need in plain English—'Add subscription tiers' or 'Lock this feature for Pro users.' Bloxs understands and generates the solution."
-              },
-              {
-                icon: Eye,
-                title: "Control over output",
-                badge: "Safe",
-                desc: "Review generated code, UI, and payment flows before deployment. You stay in control—approve, customize, or iterate until it's right."
-              }].
-              map((item, i) =>
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className="relative z-10 group">
-                    <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05] h-full">
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-purple-500/10 border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
-                          <item.icon className="w-8 h-8 text-purple-400" strokeWidth={1.5} />
-                        </div>
-                        <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 text-xs">{item.badge}</Badge>
-                      </div>
-                      <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </motion.div>
-              )}
-            </div>
-
+            <div className="max-w-4xl mx-auto mb-20">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-12 text-center">
-              <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-6 py-3">
-                <Zap className="w-4 h-4 text-purple-400" />
-                <span className="text-sm text-purple-300">Human-in-the-loop control ensures safety and customization</span>
-              </div>
+              transition={{ duration: 0.6 }}
+              className="flex flex-col">
+              <h3 className="text-2xl font-semibold mb-4 text-white">See it in action</h3>
+              <p className="text-gray-400 leading-relaxed mb-8">
+                Watch how Bloxs transforms a simple prompt into a complete payment system in seconds.
+              </p>
             </motion.div>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="flex flex-col">
-                <h3 className="text-2xl font-semibold mb-4 text-white">See it in action</h3>
-                <p className="text-gray-400 leading-relaxed mb-8">
-                  Watch how Bloxs transforms a simple prompt into a complete payment system in seconds.
-                </p>
-              </motion.div>
 
             <div className="space-y-6">
               {demoStep === "select" &&
