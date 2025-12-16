@@ -11,12 +11,13 @@ import {
 "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const emailFormRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -46,6 +47,13 @@ export default function Home() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const scrollToEmailForm = () => {
+    emailFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => {
+      emailFormRef.current?.querySelector('input')?.focus();
+    }, 500);
   };
 
   const features = [
@@ -111,7 +119,7 @@ export default function Home() {
 
             <p className="text-sm text-gray-500 !whitespace-pre-line mb-4 !whitespace-pre-line">Join the waitlist to try the product</p>
 
-            <form onSubmit={handleWaitlistSignup} className="max-w-md mx-auto mb-4">
+            <form ref={emailFormRef} onSubmit={handleWaitlistSignup} className="max-w-md mx-auto mb-4">
               <div className="flex gap-3">
                 <Input
                   type="email"
@@ -210,7 +218,7 @@ export default function Home() {
             className="text-center">
             <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line">Start accepting payments with Blox!</h2>
             <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto !whitespace-pre-line"></p>
-            <Button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base !whitespace-pre-line">Join Now</Button>
+            <Button onClick={scrollToEmailForm} className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base !whitespace-pre-line">Join Now</Button>
           </motion.div>
         </section>
       </main>
