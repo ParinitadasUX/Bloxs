@@ -350,67 +350,6 @@ export default function Home() {
                         </motion.div>
                       )}
 
-                      {showDetailsForm && (
-                        <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4 }}
-                        className="relative">
-                          <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                          <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                              <Terminal className="w-4 h-4 text-purple-400" />
-                              <span className="text-xs text-gray-400 font-mono">Enter Payment Details</span>
-                            </div>
-                            
-                            <div className="p-6 space-y-4">
-                              <div>
-                                <label className="text-xs text-gray-400 mb-1 block">Business Name</label>
-                                <Input
-                                  type="text"
-                                  placeholder="Your business name"
-                                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs"
-                                />
-                              </div>
-                              <div>
-                                <label className="text-xs text-gray-400 mb-1 block">Tax ID (Optional)</label>
-                                <Input
-                                  type="text"
-                                  placeholder="EIN or Tax ID"
-                                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs"
-                                />
-                              </div>
-                              <div>
-                                <label className="text-xs text-gray-400 mb-1 block">Business Address</label>
-                                <Input
-                                  type="text"
-                                  placeholder="123 Main St"
-                                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs"
-                                />
-                              </div>
-                              <div>
-                                <label className="text-xs text-gray-400 mb-1 block">Currency</label>
-                                <select className="w-full bg-white/5 border border-white/10 focus:border-purple-500 text-white text-xs rounded-md px-3 py-2">
-                                  <option value="usd">USD ($)</option>
-                                  <option value="eur">EUR (€)</option>
-                                  <option value="gbp">GBP (£)</option>
-                                </select>
-                              </div>
-                              <Button
-                                onClick={() => {
-                                  setShowDetailsForm(false);
-                                  setShowPaymentUI(true);
-                                  toast.success("Details saved! Generating payment UI...");
-                                }}
-                                className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
-                              >
-                                Generate Payment UI
-                              </Button>
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-
                       {showPaymentUI && (
                       <motion.div
                       initial={{ opacity: 0, y: 20 }}
