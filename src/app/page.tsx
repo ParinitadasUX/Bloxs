@@ -125,7 +125,7 @@ export default function Home() {
                 </Button>
               </div>
             </form>
-            <p className="text-sm text-gray-500 !whitespace-pre-line"></p>
+            <p className="text-sm text-gray-500 !whitespace-pre-line">Join the waitlist to try the product free</p>
           </motion.div>
         </section>
 
