@@ -7,7 +7,8 @@ import { Input } from "@/components/ui/input";
 import {
   MessageCircleHeart,
   Gavel,
-  CalendarHeart
+  CalendarHeart,
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
