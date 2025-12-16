@@ -136,10 +136,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-normal mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal mb-6">
               The <span className="text-gray-500">Vibe</span> Coder's Dilemma
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl leading-relaxed">
+            <p className="text-base text-gray-400 max-w-3xl leading-relaxed">
               Your AI assistant nails the prototype. Users actually want it. Then reality hits.<br />
               Authentication breaks. Databases crash. Deployment becomes a nightmare.<br />
               You're not alone. Every vibe coder hits this wall.
@@ -156,8 +156,8 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}>
                 <div className="border-t border-white/10 pt-8">
                   <feature.icon className="w-12 h-12 mb-6 text-white" strokeWidth={1.5} />
-                  <h3 className="font-normal text-xl mb-3 text-white">{feature.title}</h3>
-                  <p className="text-gray-400 text-base leading-relaxed">{feature.desc}</p>
+                  <h3 className="font-normal text-lg mb-3 text-white">{feature.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
                 </div>
               </motion.div>
             ))}
