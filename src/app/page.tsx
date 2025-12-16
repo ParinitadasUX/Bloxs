@@ -86,7 +86,7 @@ export default function Home() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
               <CreditCard className="w-4 h-4 text-primary-foreground" />
             </div>
-            <span className="font-semibold text-lg">PayFlow</span>
+            <span className="font-semibold text-lg">bloxs</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm">
             <Link href="#features" className="hover:text-primary transition-colors">Features</Link>
@@ -118,7 +118,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Zero-code payment integration. Tell your AI tool what you need, and PayFlow handles the rest—checkout, tax, compliance, analytics.
+              Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics.
             </p>
             <form onSubmit={handleWaitlistSignup} className="flex gap-3 max-w-md mx-auto mb-4">
               <Input
@@ -269,7 +269,7 @@ export default function Home() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
               <CreditCard className="w-4 h-4 text-primary-foreground" />
             </div>
-            <span className="font-semibold">PayFlow</span>
+            <span className="font-semibold">bloxs</span>
           </div>
           <div className="flex gap-8 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
