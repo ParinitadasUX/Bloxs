@@ -166,17 +166,16 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto">
-            <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20">
-                <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
-                <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line !whitespace-pre-line">Simple prompt to production ready</h2>
-                <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
-            </motion.div>
+          <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto">
+              <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-20">
+                  <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
+                  <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
+              </motion.div>
 
             <div className="max-w-4xl mx-auto mb-20">
           <div className="grid md:grid-cols-2 gap-8 items-start">
