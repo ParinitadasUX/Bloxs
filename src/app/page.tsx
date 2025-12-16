@@ -139,7 +139,7 @@ export default function Home() {
 
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
               Payments for<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">AI-first builders</span>
+              <span className="text-purple-400">AI-first builders</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
