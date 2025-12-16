@@ -217,62 +217,91 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <div className="max-w-3xl mx-auto space-y-8">
-              <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12">
-                <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
-                </p>
-              </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col">
+                  <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8">
+                    Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
+                  </p>
 
-              <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative">
-                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                  <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                    <Sparkles className="w-4 h-4 text-purple-400" />
-                    <span className="text-xs text-gray-400 font-mono">Prompt in you AI Tool</span>
-                    <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
-                      <Copy className="w-3.5 h-3.5 text-gray-400" />
-                    </button>
-                  </div>
-                  
-                  <div className="p-6 font-mono text-xs overflow-x-auto">
-                    <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
-                  {`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
-                    </pre>
-                  </div>
-                </div>
-              </motion.div>
+                  <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="space-y-4">
+                    {[
+                      { icon: CheckCircle2, text: "Drop-in checkout components" },
+                      { icon: CheckCircle2, text: "Automated webhook handlers" },
+                      { icon: CheckCircle2, text: "Pre-built subscription logic" },
+                      { icon: CheckCircle2, text: "Tax calculation included" }
+                    ].map((item, i) =>
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
+                        className="flex items-center gap-3">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+                          <item.icon className="w-4 h-4 text-purple-400" />
+                        </div>
+                        <span className="text-gray-300">{item.text}</span>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                </motion.div>
 
-              <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative">
-                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                  <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                    <Code2 className="w-4 h-4 text-purple-400" />
-                    <span className="text-xs text-gray-400 font-mono">Generated Code</span>
-                    <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
-                      <Copy className="w-3.5 h-3.5 text-gray-400" />
-                    </button>
-                  </div>
-                  
-                  <div className="p-6 font-mono text-xs overflow-x-auto">
-                    <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
-                  {`// Auto-generated checkout component
+                <div className="space-y-6">
+                  <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="relative">
+                    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                    <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                        <Sparkles className="w-4 h-4 text-purple-400" />
+                        <span className="text-xs text-gray-400 font-mono">Prompt in you AI Tool</span>
+                        <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                          <Copy className="w-3.5 h-3.5 text-gray-400" />
+                        </button>
+                      </div>
+                      
+                      <div className="p-6 font-mono text-xs overflow-x-auto">
+                        <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
+                      {`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
+                        </pre>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="relative">
+                    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                    <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                        <Code2 className="w-4 h-4 text-purple-400" />
+                        <span className="text-xs text-gray-400 font-mono">Generated Code</span>
+                        <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                          <Copy className="w-3.5 h-3.5 text-gray-400" />
+                        </button>
+                      </div>
+                      
+                      <div className="p-6 font-mono text-xs overflow-x-auto">
+                        <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
+                      {`// Auto-generated checkout component
 import { CheckoutForm } from '@bloxs/react'
 
 export default function Pricing() {
@@ -285,37 +314,12 @@ export default function Pricing() {
     />
   )
 }`}
-                    </pre>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-4 pt-8">
-                {[
-                  { icon: CheckCircle2, text: "Drop-in checkout components" },
-                  { icon: CheckCircle2, text: "Automated webhook handlers" },
-                  { icon: CheckCircle2, text: "Pre-built subscription logic" },
-                  { icon: CheckCircle2, text: "Tax calculation included" }
-                ].map((item, i) =>
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
-                    className="flex items-center gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
-                      <item.icon className="w-4 h-4 text-purple-400" />
+                        </pre>
+                      </div>
                     </div>
-                    <span className="text-gray-300">{item.text}</span>
                   </motion.div>
-                )}
-              </motion.div>
+                </div>
+              </div>
             </div>
           </section>
 
