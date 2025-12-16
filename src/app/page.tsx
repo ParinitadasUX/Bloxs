@@ -140,9 +140,7 @@ export default function Home() {
               The <span className="text-gray-500">Vibe</span> Coder's Dilemma
             </h2>
             <p className="text-base text-gray-400 max-w-3xl leading-relaxed">
-              Your AI assistant nails the prototype. Users actually want it. Then reality hits.<br />
-              Authentication breaks. Databases crash. Deployment becomes a nightmare.<br />
-              You're not alone. Every vibe coder hits this wall.
+              Bloxs helps you understand what matters when money flows from billing setup to basic legal readiness.
             </p>
           </motion.div>
 
