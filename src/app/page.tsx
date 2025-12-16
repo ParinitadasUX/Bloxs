@@ -284,18 +284,18 @@ export default function Home() {
                             onChange={(e) => setPromptInput(e.target.value)}
                             className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs font-mono mb-3"
                           />
-                          <Button
-                            onClick={() => {
-                              if (promptInput.trim()) {
-                                setShowDetailsForm(true);
-                              } else {
-                                toast.error("Please enter a prompt");
-                              }
-                            }}
-                            className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
-                          >
-                            Generate
-                          </Button>
+                            <Button
+                              onClick={() => {
+                                if (promptInput.trim()) {
+                                  setShowMcpSetup(true);
+                                } else {
+                                  toast.error("Please enter a prompt");
+                                }
+                              }}
+                              className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
+                            >
+                              Generate
+                            </Button>
                         </div>
                       </div>
                     </motion.div>
