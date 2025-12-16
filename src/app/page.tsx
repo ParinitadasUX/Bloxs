@@ -256,43 +256,45 @@ export default function Home() {
                   </defs>
                 </svg>
 
-                {[
-              {
-                icon: Sparkles,
-                title: "Simple prompt,",
-                subtitle: "powerful results",
-                desc: "Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity."
-              },
-              {
-                icon: CheckCircle2,
-                title: "Drop-in checkout",
-                subtitle: "components",
-                desc: "Automated webhook handlers, pre-built subscription logic, and tax calculation included."
-              },
-              {
-                icon: Terminal,
-                title: "Prompt in your",
-                subtitle: "AI Tool",
-                desc: "Add a checkout page with basic and pro tiers"
-              }].
-              map((item, i) =>
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className="relative z-10 group">
-                    <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05] h-full">
-                      <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-purple-500/10 border border-purple-500/20 mb-6 group-hover:bg-purple-500/20 transition-colors">
-                        <item.icon className="w-8 h-8 text-purple-400" strokeWidth={1.5} />
+                  {[
+                {
+                  icon: Sparkles,
+                  title: "One-time",
+                  badge: "Popular",
+                  desc: "Single payment checkout with automated receipt generation and tax calculation."
+                },
+                {
+                  icon: CheckCircle2,
+                  title: "Subscription",
+                  badge: "Best Value",
+                  desc: "Recurring billing with automatic renewals, upgrade/downgrade flows, and failed payment handling."
+                },
+                {
+                  icon: Terminal,
+                  title: "Usage-based",
+                  badge: "Flexible",
+                  desc: "Metered billing based on consumption with real-time usage tracking and threshold alerts."
+                }].
+                map((item, i) =>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.2 }}
+                  className="relative z-10 group">
+                      <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05] h-full">
+                        <div className="flex items-center justify-between mb-6">
+                          <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-purple-500/10 border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
+                            <item.icon className="w-8 h-8 text-purple-400" strokeWidth={1.5} />
+                          </div>
+                          <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 text-xs">{item.badge}</Badge>
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
-                      <h4 className="text-xl font-semibold text-purple-400 mb-4">{item.subtitle}</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </motion.div>
-              )}
+                    </motion.div>
+                )}
               </div>
 
               <motion.div
