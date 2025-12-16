@@ -220,46 +220,19 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="flex flex-col">
-                  <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8">
-                    Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
-                  </p>
-
+              <div className="max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 items-start">
                   <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="space-y-4">
-                    {[
-                      { icon: CheckCircle2, text: "Drop-in checkout components" },
-                      { icon: CheckCircle2, text: "Automated webhook handlers" },
-                      { icon: CheckCircle2, text: "Pre-built subscription logic" },
-                      { icon: CheckCircle2, text: "Tax calculation included" }
-                    ].map((item, i) =>
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
-                        className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
-                          <item.icon className="w-4 h-4 text-purple-400" />
-                        </div>
-                        <span className="text-gray-300">{item.text}</span>
-                      </motion.div>
-                    )}
+                  transition={{ duration: 0.6 }}
+                  className="flex flex-col">
+                    <h3 className="text-2xl font-semibold mb-4 text-white">See it in action</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8">
+                      Watch how Bloxs transforms a simple prompt into a complete payment system in seconds.
+                    </p>
                   </motion.div>
-                </motion.div>
 
                 <div className="space-y-6">
                     <motion.div
