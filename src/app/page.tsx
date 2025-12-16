@@ -298,24 +298,83 @@ export default function Home() {
                       </div>
                     </motion.div>
 
-                    <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="relative">
-                      <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                      <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                          <CreditCard className="w-4 h-4 text-purple-400" />
-                          <span className="text-xs text-gray-400 font-mono">Generated Subscription UI</span>
-                          <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
-                            <Copy className="w-3.5 h-3.5 text-gray-400" />
-                          </button>
-                        </div>
-                        
-                        <div className="p-6 space-y-4">
-                          <div className="grid grid-cols-2 gap-3">
+                      {showDetailsForm && (
+                        <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="relative">
+                          <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                          <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                              <Terminal className="w-4 h-4 text-purple-400" />
+                              <span className="text-xs text-gray-400 font-mono">Enter Details</span>
+                            </div>
+                            
+                            <div className="p-6 space-y-4">
+                              <div>
+                                <label className="text-xs text-gray-400 mb-1 block">Business Name</label>
+                                <Input
+                                  type="text"
+                                  placeholder="Your business name"
+                                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs"
+                                />
+                              </div>
+                              <div>
+                                <label className="text-xs text-gray-400 mb-1 block">Tax ID (Optional)</label>
+                                <Input
+                                  type="text"
+                                  placeholder="EIN or Tax ID"
+                                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs"
+                                />
+                              </div>
+                              <div>
+                                <label className="text-xs text-gray-400 mb-1 block">Business Address</label>
+                                <Input
+                                  type="text"
+                                  placeholder="123 Main St"
+                                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs"
+                                />
+                              </div>
+                              <div>
+                                <label className="text-xs text-gray-400 mb-1 block">Currency</label>
+                                <select className="w-full bg-white/5 border border-white/10 focus:border-purple-500 text-white text-xs rounded-md px-3 py-2">
+                                  <option value="usd">USD ($)</option>
+                                  <option value="eur">EUR (€)</option>
+                                  <option value="gbp">GBP (£)</option>
+                                </select>
+                              </div>
+                              <Button
+                                onClick={() => {
+                                  toast.success("Details saved! Setting up payments...");
+                                }}
+                                className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
+                              >
+                                Continue Setup
+                              </Button>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+
+                      <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="relative">
+                        <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                        <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                            <CreditCard className="w-4 h-4 text-purple-400" />
+                            <span className="text-xs text-gray-400 font-mono">Generated Subscription UI</span>
+                            <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                              <Copy className="w-3.5 h-3.5 text-gray-400" />
+                            </button>
+                          </div>
+                          
+                          <div className="p-6 space-y-4">
+                            <div className="grid grid-cols-2 gap-3">
                             <div className="bg-white/5 border border-white/10 rounded-lg p-4 hover:border-purple-500/50 transition-all cursor-pointer group">
                               <div className="flex items-center justify-between mb-2">
                                 <span className="text-sm font-semibold text-white">Basic</span>
