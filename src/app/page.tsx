@@ -178,7 +178,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs">Integration</Badge>
+            <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">Integration</Badge>
             <h2 className="text-4xl font-bold mb-4 text-white">Works with your AI tool</h2>
             <p className="text-lg text-gray-400 max-w-xl mx-auto">Just prompt. No code required.</p>
           </motion.div>
