@@ -119,10 +119,9 @@ export default function Home() {
             <Link href="#integration" className="hover:text-white transition-colors">Integration</Link>
             <Link href="#how-it-works" className="hover:text-white transition-colors">How it Works</Link>
           </div>
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">Sign in</Button>
-            <Button size="sm" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-lg">Get Started</Button>
-          </div>
+            <div className="flex items-center gap-3">
+              <Button size="sm" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-lg">Get Started</Button>
+            </div>
         </div>
       </nav>
 
