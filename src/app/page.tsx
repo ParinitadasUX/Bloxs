@@ -224,12 +224,20 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
-                  <p className="text-gray-400 leading-relaxed mb-6">
-                    Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
-                  </p>
-                </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
+                    <p className="text-gray-400 leading-relaxed mb-6">
+                      Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
+                    </p>
+                    <div className="bg-[#1A1A23] border border-white/10 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <Sparkles className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-gray-300 italic">
+                          "Add monthly subscription pricing with $29/mo and $99/mo tiers"
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
                 <div className="space-y-4">
                   {[
