@@ -137,7 +137,7 @@ export default function Home() {
               Payment infrastructure
             </Badge>
 
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Payments for<br />
               <span className="text-purple-400">AI-first builders</span>
             </h1>
