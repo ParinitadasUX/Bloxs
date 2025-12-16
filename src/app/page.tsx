@@ -56,7 +56,7 @@ export default function Home() {
   },
   {
     icon: Timer,
-    title: "From prototype to production",
+    title: "Handels Subscriptions",
     desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products."
   },
   {
