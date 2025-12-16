@@ -10,6 +10,8 @@ import {
   Shield,
   Globe,
   BarChart3,
+  Timer,
+  CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,23 +55,18 @@ export default function Home() {
   const features = [
     { 
       icon: Zap, 
-      title: "Zero-Code Integration", 
-      desc: "Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics." 
+      title: "Built for how you build", 
+      desc: "Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps." 
     },
     { 
-      icon: Shield, 
-      title: "Security Handled", 
-      desc: "PCI-DSS, GDPR, SOC 2 compliant automatically." 
+      icon: Timer, 
+      title: "From prototype to production", 
+      desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products." 
     },
     { 
-      icon: Globe, 
-      title: "Global Tax Autopilot", 
-      desc: "Automatic sales tax, VAT, GST for 190+ countries." 
-    },
-    { 
-      icon: BarChart3, 
-      title: "Analytics Built-In", 
-      desc: "Revenue, MRR, churn tracking in one place." 
+      icon: CheckCircle2, 
+      title: "Break through with our Vibe Coding Toolkit", 
+      desc: "Tools, articles, and other resources to help you deploy your application to production with confidence." 
     }
   ];
 
@@ -134,6 +131,41 @@ export default function Home() {
             </form>
             <p className="text-sm text-gray-500">Join early access. No credit card required.</p>
           </motion.div>
+        </section>
+
+        <section id="features" className="px-6 py-24 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-20">
+            <h2 className="text-4xl md:text-5xl font-normal mb-6">
+              The <span className="text-gray-500">Vibe</span> Coder's Dilemma
+            </h2>
+            <p className="text-lg text-gray-400 max-w-3xl leading-relaxed">
+              Your AI assistant nails the prototype. Users actually want it. Then reality hits.<br />
+              Authentication breaks. Databases crash. Deployment becomes a nightmare.<br />
+              You're not alone. Every vibe coder hits this wall.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}>
+                <div className="border-t border-white/10 pt-8">
+                  <feature.icon className="w-12 h-12 mb-6 text-white" strokeWidth={1.5} />
+                  <h3 className="font-normal text-xl mb-3 text-white">{feature.title}</h3>
+                  <p className="text-gray-400 text-base leading-relaxed">{feature.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </section>
 
         <section className="px-6 py-16 max-w-6xl mx-auto">
