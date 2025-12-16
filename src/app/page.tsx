@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 import {
   Zap,
   Timer,
-  CheckCircle2,
-} from "lucide-react";
+  CheckCircle2 } from
+"lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -49,29 +49,29 @@ export default function Home() {
   };
 
   const features = [
-    { 
-      icon: Zap, 
-      title: "Built for how you build", 
-      desc: "Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps." 
-    },
-    { 
-      icon: Timer, 
-      title: "From prototype to production", 
-      desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products." 
-    },
-    { 
-      icon: CheckCircle2, 
-      title: "Break through with our Vibe Coding Toolkit", 
-      desc: "Tools, articles, and other resources to help you deploy your application to production with confidence." 
-    }
-  ];
+  {
+    icon: Zap,
+    title: "Built for how you build",
+    desc: "Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps."
+  },
+  {
+    icon: Timer,
+    title: "From prototype to production",
+    desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products."
+  },
+  {
+    icon: CheckCircle2,
+    title: "Break through with our Vibe Coding Toolkit",
+    desc: "Tools, articles, and other resources to help you deploy your application to production with confidence."
+  }];
+
 
   return (
     <div className="min-h-screen bg-[#0B0B0F] text-foreground relative overflow-hidden">
       <nav className="relative z-10 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <motion.div 
+            <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
@@ -106,8 +106,8 @@ export default function Home() {
               <span className="text-purple-400">AI-first builders</span>
             </h1>
             
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-              Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics.
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest checkout, tax, compliance, analytics.
+
             </p>
 
             <form onSubmit={handleWaitlistSignup} className="max-w-md mx-auto mb-4">
@@ -118,8 +118,8 @@ export default function Home() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 h-12"
-                />
+                  className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 h-12" />
+
                 <Button type="submit" disabled={isSubmitting} className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white whitespace-nowrap h-12 px-6 rounded-lg">
                   Join Waitlist
                 </Button>
@@ -147,20 +147,20 @@ export default function Home() {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}>
+            {features.map((feature, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}>
                 <div className="border-t border-white/10 pt-8">
                   <feature.icon className="w-12 h-12 mb-6 text-white" strokeWidth={1.5} />
                   <h3 className="font-normal text-lg mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </section>
 
@@ -180,9 +180,9 @@ export default function Home() {
             <motion.div
               className="flex gap-16 opacity-60"
               animate={{ x: [0, -600] }}
-              transition={{ 
-                duration: 20, 
-                repeat: Infinity, 
+              transition={{
+                duration: 20,
+                repeat: Infinity,
                 ease: "linear",
                 repeatType: "loop"
               }}>
@@ -221,7 +221,7 @@ export default function Home() {
       <footer className="relative z-10 border-t border-white/5 px-6 py-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm text-gray-500">
           <div className="flex items-center gap-2">
-            <motion.div 
+            <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
@@ -236,6 +236,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
