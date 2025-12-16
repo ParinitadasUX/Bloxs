@@ -180,43 +180,168 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="integration" className="px-6 py-32 max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16">
-            <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">Integration</Badge>
-            <h2 className="text-4xl font-bold mb-4 text-white">Works with your AI tool</h2>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto">Just prompt. No code required.</p>
-          </motion.div>
-
-          <div className="relative overflow-hidden">
+          <section id="integration" className="px-6 py-32 max-w-6xl mx-auto">
             <motion.div
-              className="flex gap-16 opacity-60"
-              animate={{ x: [0, -600] }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear",
-                repeatType: "loop"
-              }}>
-              <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-4-1765849749288.png?width=8000&height=8000&resize=contain" alt="Figma" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-4-1765849749288.png?width=8000&height=8000&resize=contain" alt="Figma" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16">
+              <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">Integration</Badge>
+              <h2 className="text-4xl font-bold mb-4 text-white">Works with your AI tool</h2>
+              <p className="text-lg text-gray-400 max-w-xl mx-auto">Just prompt. No code required.</p>
             </motion.div>
-          </div>
-        </section>
+
+            <div className="relative overflow-hidden mb-24">
+              <motion.div
+                className="flex gap-16 opacity-60"
+                animate={{ x: [0, -600] }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop"
+                }}>
+                <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-4-1765849749288.png?width=8000&height=8000&resize=contain" alt="Figma" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-4-1765849749288.png?width=8000&height=8000&resize=contain" alt="Figma" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              </motion.div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
+                  <p className="text-gray-400 leading-relaxed mb-6">
+                    Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    { icon: CheckCircle2, text: "Drop-in checkout components" },
+                    { icon: CheckCircle2, text: "Automated webhook handlers" },
+                    { icon: CheckCircle2, text: "Pre-built subscription logic" },
+                    { icon: CheckCircle2, text: "Tax calculation included" }
+                  ].map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.1 }}
+                      className="flex items-center gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+                        <item.icon className="w-4 h-4 text-purple-400" />
+                      </div>
+                      <span className="text-gray-300">{item.text}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="pt-4">
+                  <p className="text-sm text-gray-500 mb-3">Example prompt:</p>
+                  <div className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                    <p className="text-purple-300 font-mono text-sm">
+                      "Add monthly subscription pricing with $29/mo and $99/mo tiers"
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative">
+                <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                    <Terminal className="w-4 h-4 text-gray-400" />
+                    <span className="text-xs text-gray-400 font-mono">checkout.tsx</span>
+                    <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                      <Copy className="w-3.5 h-3.5 text-gray-400" />
+                    </button>
+                  </div>
+                  
+                  <div className="p-6 font-mono text-sm overflow-x-auto">
+                    <pre className="text-gray-300">
+                      <code>
+{`export function Checkout() {
+  return (
+    <BloxsCheckout
+      pricing={{
+        basic: { price: 29, interval: 'month' },
+        pro: { price: 99, interval: 'month' }
+      }}
+      onSuccess={(session) => {
+        console.log('Payment successful');
+      }}
+    />
+  );
+}`}
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-20 grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Instant Setup",
+                  desc: "No API keys to manage. No complex onboarding. Just prompt and deploy.",
+                  icon: Zap
+                },
+                {
+                  title: "Framework Agnostic",
+                  desc: "Works with React, Next.js, Vue, Svelte, or any framework your AI uses.",
+                  icon: Code2
+                },
+                {
+                  title: "Production Ready",
+                  desc: "Battle-tested code with security, error handling, and edge cases covered.",
+                  icon: CheckCircle2
+                }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+                  className="bg-white/[0.03] border border-white/10 rounded-xl p-6 hover:border-purple-500/30 transition-all">
+                  <div className="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </section>
 
           <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto bg-gradient-to-b from-purple-950/20 to-transparent">
             <motion.div
