@@ -119,7 +119,7 @@ export default function Home() {
             </Badge>
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
               Payments for<br />
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-primary">
                 AI-first builders
               </span>
             </h1>
