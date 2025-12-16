@@ -200,10 +200,10 @@ export default function Home() {
                   className="relative">
                     <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                         <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0D0D12]">
-                            <Bot className="w-4 h-4 text-purple-400" />
-                            <span className="text-xs text-purple-300 font-mono !whitespace-pre-line">Select Prompt</span>
-                          </div>
+                            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0D0D12]">
+                              <Bot className="w-4 h-4 text-purple-400" />
+                              <span className="text-xs text-purple-300 font-mono">bloxs_cli</span>
+                            </div>
                         
                         <div className="p-6 space-y-4">
                           <div className="flex items-start gap-3 mb-4">
