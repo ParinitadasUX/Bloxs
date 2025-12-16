@@ -7,12 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Zap,
-  CreditCard,
-  ArrowRight,
-  Check,
-  Globe,
-  Shield,
-  BarChart3 } from
+  Timer,
+  CheckCircle2 } from
 "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +16,6 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState(0);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -54,32 +49,26 @@ export default function Home() {
     }
   };
 
-  const aiToolLogos = [
-  { name: "Cursor", logo: "/logos/cursor.svg" },
-  { name: "v0", logo: "/logos/v0.png" },
-  { name: "Bolt", logo: "/logos/bolt.png" },
-  { name: "Replit", logo: "/logos/replit.png" },
-  { name: "GitHub Copilot", logo: "/logos/github.svg" },
-  { name: "Windsurf", logo: "/logos/windsurf.svg" },
-  { name: "Lovable", logo: "/logos/lovable.png" },
-  { name: "Figma", logo: "/logos/figma.svg" },
-  { name: "Gemini", logo: "/logos/gemini.svg" },
-  { name: "Perplexity", logo: "/logos/perplexity.svg" },
-  { name: "Tabnine", logo: "/logos/tabnine.svg" },
-  { name: "Cody", logo: "/logos/cody.svg" },
-  { name: "CodeWhisperer", logo: "/logos/codewhisperer.svg" },
-  { name: "Devin", logo: "/logos/devin.svg" }];
-
-
   const features = [
-  { icon: Zap, title: "Zero-Code Integration", desc: "Tell your AI what you want. No SDKs, no backend." },
-  { icon: Shield, title: "Security Handled", desc: "PCI-DSS, GDPR, SOC 2 compliant automatically." },
-  { icon: Globe, title: "Global Tax Autopilot", desc: "Automatic sales tax, VAT, GST for 190+ countries." },
-  { icon: BarChart3, title: "Analytics Built-In", desc: "Revenue, MRR, churn tracking in one place." }];
-
+    { 
+      icon: Zap, 
+      title: "Built for how you build", 
+      desc: "Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps." 
+    },
+    { 
+      icon: Timer, 
+      title: "From prototype to production", 
+      desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products." 
+    },
+    { 
+      icon: CheckCircle2, 
+      title: "Break through with our Vibe Coding Toolkit", 
+      desc: "Tools, articles, and other resources to help you deploy your application to production with confidence." 
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+    <div className="min-h-screen bg-[#0a0a0a] text-foreground relative overflow-hidden">
       <nav className="relative z-10 border-b border-border/50 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
@@ -89,7 +78,6 @@ export default function Home() {
               width={32}
               height={32}
               className="w-8 h-8" />
-
             <span className="font-semibold text-lg">bloxs</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm">
@@ -105,164 +93,45 @@ export default function Home() {
       </nav>
 
       <main className="relative z-10">
-        <section className="px-6 py-32 max-w-7xl mx-auto">
+        <section className="px-6 py-24 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto">
-
-            <Badge variant="outline" className="mb-6 border-primary/30 text-primary">
-              Payment Infrastructure
-            </Badge>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-              Payments for<br />
-              <span className="text-primary">
-                AI-first builders
-              </span>
+            transition={{ duration: 0.6 }}>
+            
+            <h1 className="text-5xl md:text-6xl font-medium mb-8 leading-tight text-gray-300">
+              The <span className="text-white font-semibold">Vibe Coder's</span> Dilemma
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics.
-            </p>
-            <p className="text-sm text-muted-foreground mb-4">Join early access. No credit card required.</p>
-            <form onSubmit={handleWaitlistSignup} className="flex gap-3 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="h-12 glass" />
-
-              <Button
-                type="submit"
-                size="lg"
-                className="h-12 px-8 bg-primary hover:bg-primary/90"
-                disabled={isSubmitting}>
-
-                {isSubmitting ? "Joining..." : "Join Waitlist"}
-              </Button>
-            </form>
+            
+            <div className="space-y-2 text-lg text-gray-400 max-w-3xl leading-relaxed">
+              <p>Your AI assistant nails the prototype. Users actually want it. Then reality hits.</p>
+              <p>Authentication breaks. Databases crash. Deployment becomes a nightmare.</p>
+              <p>You're not alone. Every vibe coder hits this wall.</p>
+            </div>
           </motion.div>
         </section>
 
-        <section className="px-6 py-24 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
+        <section className="px-6 py-24 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card className="glass p-8 hover:border-primary/50 transition-colors h-full">
-                  <feature.icon className="w-12 h-12 mb-6 text-primary" />
-                  <h3 className="font-semibold text-2xl mb-3">{feature.title}</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">{feature.desc}</p>
-                </Card>
+                <div className="space-y-6">
+                  <div className="w-12 h-12 flex items-center justify-center">
+                    <feature.icon className="w-10 h-10 text-gray-500" strokeWidth={1.5} />
+                  </div>
+                  <div className="h-px bg-gradient-to-r from-gray-800 to-transparent" />
+                  <div>
+                    <h3 className="font-medium text-xl mb-4 text-white">{feature.title}</h3>
+                    <p className="text-base text-gray-400 leading-relaxed">{feature.desc}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
-        </section>
-
-        <section id="integration" className="px-6 py-24 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">Integration</Badge>
-            <h2 className="text-5xl font-bold mb-4">Works with your AI tool</h2>
-            <p className="text-muted-foreground">Just prompt. No code required.</p>
-          </div>
-
-          <div className="relative max-w-5xl mx-auto overflow-hidden py-12">
-            
-            <motion.div
-              className="flex gap-12 items-center"
-              animate={{
-                x: [0, -1400]
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 25,
-                  ease: "linear"
-                }
-              }}>
-
-              {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) =>
-              <div
-                key={i}
-                className="flex-shrink-0 px-8 py-6 min-w-[200px] flex items-center justify-center">
-
-                  <Image
-                  src={tool.logo}
-                  alt={tool.name}
-                  width={120}
-                  height={40}
-                  className="opacity-70 hover:opacity-100 transition-opacity object-contain w-[120px] h-[40px]" />
-
-                </div>
-              )}
-            </motion.div>
-          </div>
-        </section>
-
-        <section id="pricing" className="px-6 py-24 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">Pricing</Badge>
-            <h2 className="text-5xl font-bold mb-4">Simple pricing</h2>
-            <p className="text-muted-foreground">Start free. Scale as you grow.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-            {
-              name: "Starter",
-              price: "Free",
-              period: "forever",
-              features: ["2.9% + 30¢ per transaction", "Up to $10k/month", "Basic tax (US only)", "Email support"]
-            },
-            {
-              name: "Pro",
-              price: "$49",
-              period: "/month",
-              features: ["2.5% + 25¢ per transaction", "Unlimited volume", "Global tax automation", "Priority support", "Custom branding"],
-              popular: true
-            },
-            {
-              name: "Enterprise",
-              price: "Custom",
-              period: "",
-              features: ["Custom rates", "Dedicated advisor", "Tax filing help", "SLA guarantees"]
-            }].
-            map((plan) =>
-            <Card key={plan.name} className={`glass p-8 ${plan.popular ? "border-primary/50 shadow-xl shadow-primary/10" : ""}`}>
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground text-sm ml-2">{plan.period}</span>
-                </div>
-                <Button className="w-full mb-6" variant={plan.popular ? "default" : "outline"}>
-                  {plan.popular ? "Start Trial" : "Get Started"}
-                </Button>
-                <ul className="space-y-3">
-                  {plan.features.map((f) =>
-                <li key={f} className="flex gap-2 text-sm">
-                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{f}</span>
-                    </li>
-                )}
-                </ul>
-              </Card>
-            )}
-          </div>
-        </section>
-
-        <section className="px-6 py-32 max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6">Start accepting payments</h2>
-          <p className="text-xl text-muted-foreground mb-8">Join thousands shipping faster.</p>
-          <Button size="lg" className="h-12 px-8 bg-primary hover:bg-primary/90">
-            Get Started Free
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
         </section>
       </main>
 
@@ -275,7 +144,6 @@ export default function Home() {
               width={32}
               height={32}
               className="w-8 h-8" />
-
             <span className="font-semibold">bloxs</span>
           </div>
           <div className="flex gap-8 text-sm text-muted-foreground">
@@ -285,6 +153,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
