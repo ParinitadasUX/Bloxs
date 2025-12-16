@@ -104,7 +104,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
             
-            <Badge className="mb-6 bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs px-3 py-1">
+            <Badge className="mb-6 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs px-3 py-1">
               Payment infrastructure
             </Badge>
 
