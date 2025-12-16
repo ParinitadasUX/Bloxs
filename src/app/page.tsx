@@ -564,6 +564,15 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-5xl mx-auto mt-32">
+              <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16">
+                  <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
+              </motion.div>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                 <svg className="hidden md:block absolute top-1/2 left-0 w-full h-24 -translate-y-1/2 pointer-events-none z-0" viewBox="0 0 800 100" preserveAspectRatio="none">
                   <motion.path
