@@ -279,8 +279,8 @@ export default function Home() {
                       </button>
                     </div>
                     
-                    <div className="p-6 font-mono text-sm overflow-x-auto">
-                      <pre className="text-white leading-relaxed">
+                    <div className="p-6 font-mono text-xs overflow-x-auto">
+                      <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
 {`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
                       </pre>
                     </div>
