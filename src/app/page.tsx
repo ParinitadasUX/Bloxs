@@ -12,7 +12,10 @@ import {
   Sparkles,
   Code2,
   CreditCard,
-  Zap
+  Zap,
+  Terminal,
+  CheckCircle2,
+  Copy
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
