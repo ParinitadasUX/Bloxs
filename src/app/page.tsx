@@ -124,7 +124,8 @@ export default function Home() {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest—checkout, tax, compliance, analytics.
             </p>
-            <form onSubmit={handleWaitlistSignup} className="flex gap-3 max-w-md mx-auto mb-4">
+            <p className="text-sm text-muted-foreground mb-4">Join early access. No credit card required.</p>
+            <form onSubmit={handleWaitlistSignup} className="flex gap-3 max-w-md mx-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
@@ -142,7 +143,6 @@ export default function Home() {
                 {isSubmitting ? "Joining..." : "Join Waitlist"}
               </Button>
             </form>
-            <p className="text-sm text-muted-foreground mb-8">Join early access. No credit card required.</p>
           </motion.div>
         </section>
 
