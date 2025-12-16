@@ -335,16 +335,16 @@ export default function Home() {
                               <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-3">
                                 <p className="text-xs text-purple-300">Copy these credentials to your AI tool's MCP settings</p>
                               </div>
-                              <Button
-                                onClick={() => {
-                                  setShowMcpSetup(false);
-                                  setShowDetailsForm(true);
-                                  toast.success("MCP Connected! Now enter your details");
-                                }}
-                                className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
-                              >
-                                Continue
-                              </Button>
+                                <Button
+                                  onClick={() => {
+                                    setShowMcpSetup(false);
+                                    setShowPaymentUI(true);
+                                    toast.success("MCP Connected! Generating payment UI...");
+                                  }}
+                                  className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
+                                >
+                                  Continue
+                                </Button>
                             </div>
                           </div>
                         </motion.div>
