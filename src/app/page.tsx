@@ -229,26 +229,14 @@ export default function Home() {
                     <p className="text-gray-400 leading-relaxed mb-6">
                       Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity.
                     </p>
-                    <div className="bg-[#1A1A23] border border-white/10 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <Sparkles className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                        <p className="text-sm text-gray-300 italic">
-                          "export function Checkout() &#123;<br />
-                          &nbsp;&nbsp;return (<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;BloxsCheckout<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pricing=&#123;&#123;<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;basic: &#123; price: 29, interval: 'month' &#125;,<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pro: &#123; price: 99, interval: 'month' &#125;<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;&#125;<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onSuccess=&#123;(session) =&gt; &#123;<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Payment successful');<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;&#125;<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br />
-                          &nbsp;&nbsp;);<br />
-                          &#125;"
-                        </p>
+                      <div className="bg-[#1A1A23] border border-white/10 rounded-lg p-4">
+                        <div className="flex items-start gap-3">
+                          <Sparkles className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                          <p className="text-sm text-gray-300 italic">
+                            "Add a checkout page with basic and pro tiers at $29 and $99 per month"
+                          </p>
+                        </div>
                       </div>
-                    </div>
                   </div>
 
                 <div className="space-y-4">
