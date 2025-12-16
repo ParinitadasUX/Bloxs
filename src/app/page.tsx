@@ -8,7 +8,11 @@ import {
   MessageCircleHeart,
   Gavel,
   CalendarHeart,
-  ArrowRight
+  ArrowRight,
+  Sparkles,
+  Code2,
+  CreditCard,
+  Zap
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
