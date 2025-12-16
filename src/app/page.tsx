@@ -195,31 +195,26 @@ export default function Home() {
             <p className="text-lg text-gray-400 max-w-xl mx-auto">Just prompt. No code required.</p>
           </motion.div>
 
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-60">
+          <div className="relative overflow-hidden">
             <motion.div
-              animate={{ x: [-5, 5, -5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0 }}>
-              <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
-            </motion.div>
-            <motion.div
-              animate={{ x: [-5, 5, -5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}>
-              <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
-            </motion.div>
-            <motion.div
-              animate={{ x: [-5, 5, -5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}>
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
-            </motion.div>
-            <motion.div
-              animate={{ x: [-5, 5, -5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2.4 }}>
-              <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
-            </motion.div>
-            <motion.div
-              animate={{ x: [-5, 5, -5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 3.2 }}>
-              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all" />
+              className="flex gap-16 opacity-60"
+              animate={{ x: [0, -600] }}
+              transition={{ 
+                duration: 20, 
+                repeat: Infinity, 
+                ease: "linear",
+                repeatType: "loop"
+              }}>
+              <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="/logos/windsurf.svg" alt="Windsurf" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+              <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
             </motion.div>
           </div>
         </section>
