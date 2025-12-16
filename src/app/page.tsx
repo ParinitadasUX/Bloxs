@@ -630,7 +630,7 @@ export default function Home() {
                       <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 text-xs">{item.badge}</Badge>
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed !whitespace-pre-line">{item.desc}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed !whitespace-pre-line !whitespace-pre-line">{item.desc}</p>
                   </div>
                 </motion.div>
               )}
