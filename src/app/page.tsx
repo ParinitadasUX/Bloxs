@@ -472,21 +472,21 @@ export default function Home() {
                 {[
               {
                 icon: Sparkles,
-                title: "Tell your AI",
-                subtitle: "what you need",
-                desc: "Describe your payment flow in plain language"
+                title: "Simple prompt,",
+                subtitle: "powerful results",
+                desc: "Tell your AI tool what you need, and Bloxs generates production-ready payment code. No manual setup, no configuration files, no complexity."
               },
               {
-                icon: Code2,
-                title: "Bloxs generates",
-                subtitle: "the code",
-                desc: "Pre-configured checkout, webhooks, and subscription logic"
+                icon: CheckCircle2,
+                title: "Drop-in checkout",
+                subtitle: "components",
+                desc: "Automated webhook handlers, pre-built subscription logic, and tax calculation included."
               },
               {
-                icon: CreditCard,
-                title: "Go live and",
-                subtitle: "get paid",
-                desc: "Tax compliance, legal requirements handled automatically"
+                icon: Terminal,
+                title: "Prompt in your",
+                subtitle: "AI Tool",
+                desc: "Add a checkout page with basic and pro tiers"
               }].
               map((item, i) =>
               <motion.div
