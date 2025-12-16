@@ -121,7 +121,7 @@ export default function Home() {
             <Link href="#how-it-works" className="hover:text-white transition-colors">How it Works</Link>
           </div>
             <div className="flex items-center gap-3">
-              <Button size="sm" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-lg">Get Started</Button>
+              <Button onClick={scrollToEmailForm} size="sm" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-lg">Join Waitlist</Button>
             </div>
         </div>
       </nav>
