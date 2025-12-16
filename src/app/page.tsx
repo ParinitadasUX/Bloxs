@@ -15,7 +15,8 @@ import {
   Zap,
   CheckCircle2,
   Copy,
-  Bot } from
+  Bot,
+  Eye } from
 "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
