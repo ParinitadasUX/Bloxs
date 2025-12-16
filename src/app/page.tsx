@@ -649,7 +649,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-20">
-              <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">Features</Badge>
+              <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs !whitespace-pre-line">Features</Badge>
               <h2 className="text-3xl md:text-4xl font-normal mb-6">
                 The <span className="text-gray-400">Vibe</span> Coder's Dilemma
               </h2>
