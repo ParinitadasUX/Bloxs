@@ -56,7 +56,7 @@ export default function Home() {
 
   const aiToolLogos = [
   { name: "Cursor", logo: "/logos/cursor.svg" },
-  { name: "v0", logo: "/logos/v0.svg" },
+  { name: "v0", logo: "/logos/v0.png" },
   { name: "Bolt", logo: "/logos/bolt.png" },
   { name: "Replit", logo: "/logos/replit.png" },
   { name: "GitHub Copilot", logo: "/logos/github.svg" },
