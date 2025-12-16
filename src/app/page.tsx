@@ -198,7 +198,7 @@ export default function Home() {
                   alt={tool.name}
                   width={120}
                   height={40}
-                  className="opacity-70 hover:opacity-100 transition-opacity" />
+                  className="opacity-70 hover:opacity-100 transition-opacity object-contain w-[120px] h-[40px]" />
 
                 </div>
               )}
