@@ -73,34 +73,6 @@ export default function Home() {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "Free",
-      period: "forever",
-      desc: "Up to $10k/month",
-      features: ["2.5% + 25¢ per transaction", "Up to $10k/month", "Basic tax US only", "Email support"],
-      cta: "Get Started"
-    },
-    {
-      name: "Pro",
-      price: "$49",
-      period: "/month",
-      desc: "Scale as you grow",
-      features: ["2.5% + 25¢ per transaction", "Unlimited volume", "Global tax automation", "GDPR tax automation", "Priority support", "Custom branding"],
-      cta: "Start Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      desc: "For teams and organizations at scale",
-      features: ["Custom rates", "Dedicated advisor", "Tax filing TPA", "SLA guarantees", "Advanced security", "Training & onboarding"],
-      cta: "Get Started"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-[#0B0B0F] text-foreground relative overflow-hidden">
       <nav className="relative z-10 border-b border-white/5">
@@ -117,7 +89,6 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
             <Link href="#features" className="hover:text-white transition-colors">Features</Link>
             <Link href="#integration" className="hover:text-white transition-colors">Integration</Link>
-            <Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link>
           </div>
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">Sign in</Button>
@@ -218,59 +189,6 @@ export default function Home() {
               <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
               <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-4-1765849749288.png?width=8000&height=8000&resize=contain" alt="Figma" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
             </motion.div>
-          </div>
-        </section>
-
-        <section id="pricing" className="px-6 py-24 max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs">Pricing</Badge>
-            <h2 className="text-4xl font-bold mb-4 text-white">Simple pricing</h2>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto">Start free. Scale as you grow.</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card className={`p-8 bg-white/[0.02] border-white/10 h-full relative hover:bg-white/[0.04] transition-colors ${plan.popular ? 'border-purple-500/50 bg-white/[0.04]' : ''}`}>
-                  {plan.popular && (
-                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8B5CF6] text-white border-0">
-                      Most Popular
-                    </Badge>
-                  )}
-                  <div className="mb-8">
-                    <h3 className="text-xl font-semibold mb-2 text-white">{plan.name}</h3>
-                    <div className="flex items-baseline gap-1 mb-2">
-                      <span className="text-5xl font-bold text-white">{plan.price}</span>
-                      {plan.period && <span className="text-gray-400">{plan.period}</span>}
-                    </div>
-                    <p className="text-gray-400 text-sm">{plan.desc}</p>
-                  </div>
-                  <Button className={`w-full mb-6 h-11 rounded-lg ${plan.popular ? 'bg-[#8B5CF6] hover:bg-[#7C3AED] text-white' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'}`}>
-                    {plan.cta}
-                  </Button>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, fi) => (
-                      <li key={fi} className="flex items-start gap-3 text-sm">
-                        <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </motion.div>
-            ))}
           </div>
         </section>
 
