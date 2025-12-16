@@ -282,44 +282,40 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-20 grid md:grid-cols-3 gap-6">
-              {[
-            {
-              title: "Instant Setup",
-              desc: "No API keys to manage. No complex onboarding. Just prompt and deploy.",
-              icon: Zap
-            },
-            {
-              title: "Framework Agnostic",
-              desc: "Works with React, Next.js, Vue, Svelte, or any framework your AI uses.",
-              icon: Code2
-            },
-            {
-              title: "Production Ready",
-              desc: "Battle-tested code with security, error handling, and edge cases covered.",
-              icon: CheckCircle2
-            }].
-            map((item, i) =>
-            <motion.div
-              key={i}
+              <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
-              className="bg-white/[0.03] border border-white/10 rounded-xl p-6 hover:border-purple-500/30 transition-all">
-                  <div className="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-purple-400" />
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-20">
+                  <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl max-w-xl mx-auto">
+                    <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                      <Code2 className="w-4 h-4 text-purple-400" />
+                      <span className="text-xs text-gray-400 font-mono">Generated Code</span>
+                      <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                        <Copy className="w-3.5 h-3.5 text-gray-400" />
+                      </button>
+                    </div>
+                    
+                    <div className="p-6 font-mono text-xs overflow-x-auto">
+                      <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
+                    {`// Auto-generated checkout component
+import { CheckoutForm } from '@bloxs/react'
+
+export default function Pricing() {
+  return (
+    <CheckoutForm
+      plans={[
+        { name: 'Basic', price: 29 },
+        { name: 'Pro', price: 99 }
+      ]}
+    />
+  )
+}`}
+                      </pre>
+                    </div>
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
-                </motion.div>
-            )}
-            </motion.div>
+              </motion.div>
           </section>
 
           <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto bg-gradient-to-b from-purple-950/20 to-transparent">
