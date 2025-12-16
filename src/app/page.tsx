@@ -211,9 +211,7 @@ export default function Home() {
             className="text-center">
             <h2 className="text-4xl font-bold mb-4 text-white">Start accepting payments</h2>
             <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto !whitespace-pre-line"></p>
-            <Button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base !whitespace-pre-line">Join
-
-            </Button>
+            <Button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base !whitespace-pre-line">Join Now</Button>
           </motion.div>
         </section>
       </main>
