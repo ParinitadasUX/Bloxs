@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Zap,
-  Timer,
   CheckCircle2,
   CalendarHeart } from
 "lucide-react";
@@ -64,11 +63,6 @@ export default function Home() {
     icon: CheckCircle2,
     title: "Legal clarity, not confusion",
     desc: "Bloxs surfaces the right legal and tax steps when you start charging without jargon or overwhelm."
-  },
-  {
-    icon: Timer,
-    title: "Customer retention",
-    desc: "Track billing cycles, send renewal reminders, and keep customers engaged with automated workflows."
   }];
 
   return (
