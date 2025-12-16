@@ -168,22 +168,22 @@ export default function Home() {
 
           <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto">
               <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-20">
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20">
                   <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
               </motion.div>
 
             <div className="max-w-4xl mx-auto mb-20">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col">
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col">
               <h3 className="text-2xl font-semibold mb-4 text-white">See it in action</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
                 Watch how Bloxs transforms a simple prompt into a complete payment system in seconds.
@@ -606,7 +606,7 @@ export default function Home() {
                 icon: Sparkles,
                 title: "Prompt in your fav AI tool",
                 badge: "Natural",
-                desc: "Describe what you need in plain English—'Add subscription tiers' or 'Lock this feature for Pro users.' Bloxs understands and generates the solution."
+                desc: "Describe what you need in plain English'Add subscription tiers' or 'Lock this feature for Pro users.' Bloxs understands and generates the solution."
               },
               {
                 icon: Eye,
@@ -633,15 +633,15 @@ export default function Home() {
                     <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
-            )}
+              )}
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12 text-center">
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-12 text-center">
             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-6 py-3">
               <Zap className="w-4 h-4 text-purple-400" />
               <span className="text-sm text-purple-300">Human-in-the-loop control ensures safety and customization</span>
