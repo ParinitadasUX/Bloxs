@@ -563,15 +563,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto mt-32">
-              <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16">
-                  <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
-              </motion.div>
+          <div className="relative max-w-5xl mx-auto mt-32">
+                <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-6 py-3">
+                <Zap className="w-4 h-4 text-purple-400" />
+                <span className="text-sm text-purple-300">Human-in-the-loop control ensures safety and customization</span>
+              </div>
+            </motion.div>
+
+                <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16">
+                    <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
+                </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                 <svg className="hidden md:block absolute top-1/2 left-0 w-full h-24 -translate-y-1/2 pointer-events-none z-0" viewBox="0 0 800 100" preserveAspectRatio="none">
