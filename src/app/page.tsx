@@ -348,7 +348,8 @@ export default function Home() {
                           <Button
                         onClick={() => {
                           if (promptInput.trim()) {
-                            setShowMcpSetup(true);
+                            setShowPaymentUI(true);
+                            toast.success("Generating payment UI...");
                           } else {
                             toast.error("Please enter a prompt");
                           }
