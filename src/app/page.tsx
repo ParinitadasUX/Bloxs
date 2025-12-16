@@ -441,9 +441,9 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-center mb-20">
-              <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
-              <h2 className="text-4xl font-bold mb-4 text-white">Three steps to revenue</h2>
-              <p className="text-lg text-gray-400 max-w-2xl mx-auto">From prompt to paid in minutes</p>
+                <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
+                <h2 className="text-4xl font-bold mb-4 text-white">Simple prompt, powerful results</h2>
+                <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
             </motion.div>
 
             <div className="relative max-w-5xl mx-auto">
