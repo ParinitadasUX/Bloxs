@@ -265,7 +265,7 @@ export default function Home() {
                   <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                     <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
                       <Sparkles className="w-4 h-4 text-purple-400" />
-                      <span className="text-xs text-gray-400 font-mono">Prompt in you AI Tool</span>
+                      <span className="text-xs text-gray-400 font-mono !whitespace-pre-line">Prompt in you AI Tool</span>
                       <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
                         <Copy className="w-3.5 h-3.5 text-gray-400" />
                       </button>
