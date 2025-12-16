@@ -650,9 +650,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-20">
               <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs !whitespace-pre-line">Features</Badge>
-              <h2 className="text-3xl md:text-4xl font-normal mb-6">
-                The <span className="text-gray-400">Vibe</span> Coder's Dilemma
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-normal mb-6">What Bloxs  Coder's Dilemma
+              <span className="text-gray-400">Vibe</span>
+            </h2>
               <p className="text-base text-gray-400 max-w-3xl leading-relaxed !whitespace-pre-line">Your AI nails the prototype and users want it but when it's time to charge, subscriptions get messy, legal questions creep in, and momentum slows. Bloxs helps you understand what matters when money flows from billing setup to basic legal readiness.
 
               </p>
