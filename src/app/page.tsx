@@ -270,33 +270,21 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="relative">
-                <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                  <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                    <Terminal className="w-4 h-4 text-gray-400" />
-                    <span className="text-xs text-gray-400 font-mono">checkout.tsx</span>
-                    <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
-                      <Copy className="w-3.5 h-3.5 text-gray-400" />
-                    </button>
+                  <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                    <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                      <Sparkles className="w-4 h-4 text-purple-400" />
+                      <span className="text-xs text-gray-400 font-mono">Prompt</span>
+                      <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                        <Copy className="w-3.5 h-3.5 text-gray-400" />
+                      </button>
+                    </div>
+                    
+                    <div className="p-6 font-mono text-sm overflow-x-auto">
+                      <pre className="text-white leading-relaxed">
+{`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
+                      </pre>
+                    </div>
                   </div>
-                  
-                  <div className="p-6 font-mono text-sm overflow-x-auto">
-                    <pre className="text-white leading-relaxed">
-{`export function Checkout() {
-  return (
-    <BloxsCheckout
-      pricing={{
-        basic: { price: 29, interval: 'month' },
-        pro: { price: 99, interval: 'month' }
-      }}
-      onSuccess={(session) => {
-        console.log('Payment successful');
-      }}
-    />
-  );
-}`}
-                    </pre>
-                  </div>
-                </div>
 
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
               </motion.div>
