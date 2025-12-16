@@ -238,7 +238,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto bg-gradient-to-b from-purple-950/20 to-transparent">
+          <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto">
             <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
