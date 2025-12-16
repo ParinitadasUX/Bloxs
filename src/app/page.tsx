@@ -119,16 +119,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <div className="space-y-6">
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    <feature.icon className="w-10 h-10 text-gray-500" strokeWidth={1.5} />
-                  </div>
-                  <div className="h-px bg-gradient-to-r from-gray-800 to-transparent" />
-                  <div>
-                    <h3 className="font-medium text-xl mb-4 text-white">{feature.title}</h3>
-                    <p className="text-base text-gray-400 leading-relaxed">{feature.desc}</p>
-                  </div>
-                </div>
+                <Card className="p-8 bg-[#111] border-border/50 h-full">
+                  <feature.icon className="w-12 h-12 mb-6 text-primary" strokeWidth={1.5} />
+                  <h3 className="font-semibold text-xl mb-4">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                </Card>
               </motion.div>
             ))}
           </div>
