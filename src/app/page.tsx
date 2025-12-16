@@ -62,7 +62,7 @@ export default function Home() {
   {
     icon: CheckCircle2,
     title: "Legal clarity, not confusion",
-    desc: "Tools, articles, and other resources to help you deploy your application to production with confidence."
+    desc: "Bloxs surfaces the right legal and tax steps when you start charging without jargon or overwhelm."
   }];
 
 
