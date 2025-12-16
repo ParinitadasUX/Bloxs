@@ -125,7 +125,7 @@ export default function Home() {
                 </Button>
               </div>
             </form>
-            <p className="text-sm text-gray-500">Join early access. No credit card required.</p>
+            <p className="text-sm text-gray-500"></p>
           </motion.div>
         </section>
 
