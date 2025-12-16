@@ -58,7 +58,7 @@ export default function Home() {
 
   const features = [
   {
-    icon: Zap,
+    icon: MessageCircleHeart,
     title: "Prompt it. It works.",
     desc: "One prompt in your AI tool creates working payments and subscriptions."
   },
