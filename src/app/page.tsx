@@ -403,11 +403,18 @@ export default function Home() {
                   transition={{ duration: 0.4 }}
                   className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                      <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                          <Sparkles className="w-4 h-4 text-purple-400" />
-                          <span className="text-xs text-gray-400 font-mono">Define your subscription tiers</span>
-                        </div>
+                        <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0D0D12]">
+                            <Terminal className="w-4 h-4 text-purple-400" />
+                            <span className="text-xs text-purple-300 font-mono">bloxs_cli</span>
+                          </div>
+                          
+                          <div className="px-6 pt-4 pb-2 border-b border-white/10 bg-[#16161D]">
+                            <div className="flex items-start gap-3">
+                              <span className="text-purple-400 font-mono text-xs">{'>'}</span>
+                              <p className="text-white text-xs font-mono">Create subscription tiers</p>
+                            </div>
+                          </div>
                         
                         <div className="p-6 space-y-6 max-h-96 overflow-y-auto">
                           {subscriptionTiers.map((tier, tierIdx) =>
