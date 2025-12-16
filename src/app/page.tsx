@@ -648,19 +648,8 @@ export default function Home() {
               )}
           </div>
 
-          <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-6 py-3">
-              <Zap className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">Human-in-the-loop control ensures safety and customization</span>
-            </div>
-          </motion.div>
-        </div>
-        </section>
+          </div>
+          </section>
 
           <section id="features" className="px-6 py-32 max-w-6xl mx-auto">
             <motion.div
