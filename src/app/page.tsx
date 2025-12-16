@@ -147,54 +147,20 @@ export default function Home() {
         </section>
 
         <section className="px-6 py-24 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-6 grid-cols-1 gap-6 auto-rows-[200px]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
-              className="md:col-span-3 md:row-span-2">
-                <Card className="glass p-8 hover:border-primary/50 transition-colors h-full flex flex-col justify-center">
-                  <Zap className="w-12 h-12 mb-6 text-primary" />
-                  <h3 className="font-semibold text-2xl mb-3">Zero-Code Integration</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">Tell your AI what you want. No SDKs, no backend.</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {features.map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}>
+                <Card className="glass p-8 hover:border-primary/50 transition-colors h-full">
+                  <feature.icon className="w-12 h-12 mb-6 text-primary" />
+                  <h3 className="font-semibold text-2xl mb-3">{feature.title}</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">{feature.desc}</p>
                 </Card>
               </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="md:col-span-3 md:row-span-1">
-                <Card className="glass p-6 hover:border-primary/50 transition-colors h-full flex flex-col justify-center">
-                  <Shield className="w-10 h-10 mb-4 text-primary" />
-                  <h3 className="font-semibold text-xl mb-2">Security Handled</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">PCI-DSS, GDPR, SOC 2 compliant automatically.</p>
-                </Card>
-              </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="md:col-span-2 md:row-span-1">
-                <Card className="glass p-6 hover:border-primary/50 transition-colors h-full flex flex-col justify-center">
-                  <Globe className="w-10 h-10 mb-4 text-primary" />
-                  <h3 className="font-semibold text-xl mb-2">Global Tax Autopilot</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Automatic sales tax, VAT, GST for 190+ countries.</p>
-                </Card>
-              </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="md:col-span-4 md:row-span-1">
-                <Card className="glass p-6 hover:border-primary/50 transition-colors h-full flex flex-col justify-center">
-                  <BarChart3 className="w-10 h-10 mb-4 text-primary" />
-                  <h3 className="font-semibold text-xl mb-2">Analytics Built-In</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Revenue, MRR, churn tracking in one place.</p>
-                </Card>
-              </motion.div>
+            ))}
           </div>
         </section>
 
