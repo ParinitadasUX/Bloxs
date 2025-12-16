@@ -52,7 +52,7 @@ export default function Home() {
   {
     icon: Zap,
     title: "Prompt it. It works.",
-    desc: "Describe your pricing model, and bloxs generates the entire checkout flow, subscription logic, and payment infrastructure."
+    desc: "One prompt in your AI tool creates working payments and subscriptions."
   },
   {
     icon: Timer,
