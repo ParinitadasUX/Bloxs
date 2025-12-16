@@ -286,12 +286,12 @@ export default function Home() {
                 badge: "Best Value",
                 desc: "Recurring billing with automatic renewals, upgrade/downgrade flows, and failed payment handling."
               },
-              {
-                icon: Terminal,
-                title: "Usage-based",
-                badge: "Flexible",
-                desc: "Metered billing based on consumption with real-time usage tracking and threshold alerts."
-              }].
+                {
+                  icon: Bot,
+                  title: "Usage-based",
+                  badge: "Flexible",
+                  desc: "Metered billing based on consumption with real-time usage tracking and threshold alerts."
+                }].
               map((item, i) =>
               <motion.div
                 key={i}
