@@ -229,7 +229,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20">
                 <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
-                <h2 className="text-4xl font-bold mb-4 text-white">Simple prompt, production ready</h2>
+                <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line">Simple prompt, production ready</h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
             </motion.div>
 
