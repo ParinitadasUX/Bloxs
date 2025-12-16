@@ -56,7 +56,7 @@ export default function Home() {
     desc: "One prompt in your AI tool creates working payments and subscriptions."
   },
   {
-    icon: Timer,
+    icon: CalendarHeart,
     title: "Handle subscriptions",
     desc: "Bloxs manage upgrades, cancellations, renewals, and failed payments for you."
   },
@@ -66,7 +66,7 @@ export default function Home() {
     desc: "Bloxs surfaces the right legal and tax steps when you start charging without jargon or overwhelm."
   },
   {
-    icon: CalendarHeart,
+    icon: Timer,
     title: "Customer retention",
     desc: "Track billing cycles, send renewal reminders, and keep customers engaged with automated workflows."
   }];
