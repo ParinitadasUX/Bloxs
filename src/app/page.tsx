@@ -270,9 +270,13 @@ export default function Home() {
       <footer className="relative z-10 border-t border-border/50 backdrop-blur-xl px-6 py-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <CreditCard className="w-4 h-4 text-primary-foreground" />
-            </div>
+            <Image 
+              src="/bloxs-logo.png" 
+              alt="bloxs logo" 
+              width={32} 
+              height={32}
+              className="w-8 h-8"
+            />
             <span className="font-semibold">bloxs</span>
           </div>
           <div className="flex gap-8 text-sm text-muted-foreground">
