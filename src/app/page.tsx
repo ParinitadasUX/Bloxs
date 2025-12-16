@@ -274,9 +274,30 @@ export default function Home() {
                   className="relative">
                     <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                         <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0D0D12]">
-                            <Bot className="w-4 h-4 text-purple-400" />
-                            <span className="text-xs text-purple-300 font-mono">bloxs_cli</span>
+                          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0D0D12] overflow-hidden">
+                            <Bot className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                            <span className="text-xs text-purple-300 font-mono flex-shrink-0">Enter prompt</span>
+                            <div className="flex-1 overflow-hidden ml-4">
+                              <motion.div
+                                className="flex gap-6 items-center"
+                                animate={{ x: [0, -300] }}
+                                transition={{
+                                  duration: 10,
+                                  repeat: Infinity,
+                                  ease: "linear",
+                                  repeatType: "loop"
+                                }}>
+                                <Image src="/logos/bolt.png" alt="Bolt" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="/logos/replit.png" alt="Replit" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="/logos/windsurf.svg" alt="Windsurf" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-2-1765849549634.png?width=8000&height=8000&resize=contain" alt="V0" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-4-1765849749288.png?width=8000&height=8000&resize=contain" alt="Figma" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="/logos/bolt.png" alt="Bolt" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="/logos/replit.png" alt="Replit" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                                <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={60} height={20} className="h-4 w-auto grayscale opacity-40 flex-shrink-0" />
+                              </motion.div>
+                            </div>
                           </div>
                         
                         <div className="px-6 pt-4 pb-2 border-b border-white/10 bg-[#16161D]">
