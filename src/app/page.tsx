@@ -716,16 +716,17 @@ export default function Home() {
             </section>
 
         <section className="px-6 py-32 max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center">
-              <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line">Start accepting payments with Blox!</h2>
-              <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto !whitespace-pre-line">Join the waitlist to try the product</p>
-              <Button onClick={scrollToEmailForm} className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base !whitespace-pre-line">Join Now</Button>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center">
+                <h2 className="text-4xl font-bold mb-4 text-white !whitespace-pre-line">Start accepting payments with Blox!</h2>
+                <p className="text-lg text-gray-400 mb-2 max-w-xl mx-auto !whitespace-pre-line"></p>
+                <p className="text-sm text-gray-500 mb-8 !whitespace-pre-line">Join the waitlist to try the product</p>
+                <Button onClick={scrollToEmailForm} className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white h-12 px-8 rounded-lg text-base !whitespace-pre-line">Join Now</Button>
+            </motion.div>
         </section>
       </main>
 
