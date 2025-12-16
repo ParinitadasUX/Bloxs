@@ -91,7 +91,7 @@ export default function Home() {
       </nav>
 
       <main className="relative z-10">
-        <section className="px-6 py-32 max-w-5xl mx-auto text-center">
+        <section className="px-6 py-40 max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section id="features" className="px-6 py-24 max-w-6xl mx-auto">
+        <section id="features" className="px-6 py-32 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="integration" className="px-6 py-24 max-w-6xl mx-auto">
+        <section id="integration" className="px-6 py-32 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="px-6 py-24 max-w-4xl mx-auto">
+        <section className="px-6 py-32 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
