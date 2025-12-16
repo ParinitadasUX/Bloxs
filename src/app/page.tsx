@@ -27,7 +27,6 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const emailFormRef = useRef<HTMLFormElement>(null);
   const [promptInput, setPromptInput] = useState("");
-  const [showMcpSetup, setShowMcpSetup] = useState(false);
   const [showPaymentUI, setShowPaymentUI] = useState(false);
 
   useEffect(() => {
