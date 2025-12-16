@@ -285,8 +285,7 @@ export default function Home() {
                   </div>
                   
                   <div className="p-6 font-mono text-sm overflow-x-auto">
-                    <pre className="text-gray-300">
-                      <code>
+                    <pre className="text-white leading-relaxed">
 {`export function Checkout() {
   return (
     <BloxsCheckout
@@ -300,7 +299,6 @@ export default function Home() {
     />
   );
 }`}
-                      </code>
                     </pre>
                   </div>
                 </div>
