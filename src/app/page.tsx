@@ -51,7 +51,7 @@ export default function Home() {
   const features = [
   {
     icon: Zap,
-    title: "Built for how you build",
+    title: "Prompt it. It works.",
     desc: "Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps."
   },
   {
