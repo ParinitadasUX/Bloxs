@@ -15,8 +15,8 @@ import {
   Zap,
   Terminal,
   CheckCircle2,
-  Copy
-} from "lucide-react";
+  Copy } from
+"lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -182,11 +182,11 @@ export default function Home() {
 
           <section id="integration" className="px-6 py-32 max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16">
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16">
               <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">Integration</Badge>
               <h2 className="text-4xl font-bold mb-4 text-white">Works with your AI tool</h2>
               <p className="text-lg text-gray-400 max-w-xl mx-auto">Just prompt. No code required.</p>
@@ -194,14 +194,14 @@ export default function Home() {
 
             <div className="relative overflow-hidden mb-24">
               <motion.div
-                className="flex gap-16 opacity-60"
-                animate={{ x: [0, -600] }}
-                transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                  repeatType: "loop"
-                }}>
+              className="flex gap-16 opacity-60"
+              animate={{ x: [0, -600] }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear",
+                repeatType: "loop"
+              }}>
                 <Image src="/logos/bolt.png" alt="Bolt" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
                 <Image src="/logos/replit.png" alt="Replit" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
                 <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Logo-1-1765849507570.png?width=8000&height=8000&resize=contain" alt="Lovable" width={120} height={40} className="h-8 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0" />
@@ -219,11 +219,11 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="space-y-8">
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8">
                     <div>
                       <h3 className="text-2xl font-semibold mb-4 text-white">Simple prompt, powerful results</h3>
                       <p className="text-gray-400 leading-relaxed mb-6">
@@ -233,39 +233,39 @@ export default function Home() {
 
                 <div className="space-y-4">
                   {[
-                    { icon: CheckCircle2, text: "Drop-in checkout components" },
-                    { icon: CheckCircle2, text: "Automated webhook handlers" },
-                    { icon: CheckCircle2, text: "Pre-built subscription logic" },
-                    { icon: CheckCircle2, text: "Tax calculation included" }
-                  ].map((item, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: i * 0.1 }}
-                      className="flex items-center gap-3">
+                { icon: CheckCircle2, text: "Drop-in checkout components" },
+                { icon: CheckCircle2, text: "Automated webhook handlers" },
+                { icon: CheckCircle2, text: "Pre-built subscription logic" },
+                { icon: CheckCircle2, text: "Tax calculation included" }].
+                map((item, i) =>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="flex items-center gap-3">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
                         <item.icon className="w-4 h-4 text-purple-400" />
                       </div>
                       <span className="text-gray-300">{item.text}</span>
                     </motion.div>
-                  ))}
+                )}
                 </div>
 
 
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative">
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative">
                   <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                     <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
                       <Sparkles className="w-4 h-4 text-purple-400" />
-                      <span className="text-xs text-gray-400 font-mono">Prompt</span>
+                      <span className="text-xs text-gray-400 font-mono">Prompt in you AI Tool</span>
                       <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
                         <Copy className="w-3.5 h-3.5 text-gray-400" />
                       </button>
@@ -273,7 +273,7 @@ export default function Home() {
                     
                     <div className="p-6 font-mono text-xs overflow-x-auto">
                       <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
-{`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
+                    {`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
                       </pre>
                     </div>
                   </div>
@@ -283,52 +283,52 @@ export default function Home() {
             </div>
 
             <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-20 grid md:grid-cols-3 gap-6">
+              {[
+            {
+              title: "Instant Setup",
+              desc: "No API keys to manage. No complex onboarding. Just prompt and deploy.",
+              icon: Zap
+            },
+            {
+              title: "Framework Agnostic",
+              desc: "Works with React, Next.js, Vue, Svelte, or any framework your AI uses.",
+              icon: Code2
+            },
+            {
+              title: "Production Ready",
+              desc: "Battle-tested code with security, error handling, and edge cases covered.",
+              icon: CheckCircle2
+            }].
+            map((item, i) =>
+            <motion.div
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-20 grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Instant Setup",
-                  desc: "No API keys to manage. No complex onboarding. Just prompt and deploy.",
-                  icon: Zap
-                },
-                {
-                  title: "Framework Agnostic",
-                  desc: "Works with React, Next.js, Vue, Svelte, or any framework your AI uses.",
-                  icon: Code2
-                },
-                {
-                  title: "Production Ready",
-                  desc: "Battle-tested code with security, error handling, and edge cases covered.",
-                  icon: CheckCircle2
-                }
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
-                  className="bg-white/[0.03] border border-white/10 rounded-xl p-6 hover:border-purple-500/30 transition-all">
+              transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+              className="bg-white/[0.03] border border-white/10 rounded-xl p-6 hover:border-purple-500/30 transition-all">
                   <div className="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-purple-400" />
                   </div>
                   <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
                   <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </motion.div>
-              ))}
+            )}
             </motion.div>
           </section>
 
           <section id="how-it-works" className="px-6 py-32 max-w-7xl mx-auto bg-gradient-to-b from-purple-950/20 to-transparent">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-20">
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20">
               <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
               <h2 className="text-4xl font-bold mb-4 text-white">Three steps to revenue</h2>
               <p className="text-lg text-gray-400 max-w-2xl mx-auto">From prompt to paid in minutes</p>
@@ -338,16 +338,16 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                 <svg className="hidden md:block absolute top-1/2 left-0 w-full h-24 -translate-y-1/2 pointer-events-none z-0" viewBox="0 0 800 100" preserveAspectRatio="none">
                   <motion.path
-                    d="M 100 50 L 350 50 M 450 50 L 700 50"
-                    stroke="url(#gradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="5,5"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                  />
+                  d="M 100 50 L 350 50 M 450 50 L 700 50"
+                  stroke="url(#gradient)"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeDasharray="5,5"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2, ease: "easeInOut" }} />
+
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.3" />
@@ -358,32 +358,32 @@ export default function Home() {
                 </svg>
 
                 {[
-                  {
-                    icon: Sparkles,
-                    title: "Tell your AI",
-                    subtitle: "what you need",
-                    desc: "Describe your payment flow in plain language"
-                  },
-                  {
-                    icon: Code2,
-                    title: "Bloxs generates",
-                    subtitle: "the code",
-                    desc: "Pre-configured checkout, webhooks, and subscription logic"
-                  },
-                  {
-                    icon: CreditCard,
-                    title: "Go live and",
-                    subtitle: "get paid",
-                    desc: "Tax compliance, legal requirements handled automatically"
-                  }
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: i * 0.2 }}
-                    className="relative z-10 group">
+              {
+                icon: Sparkles,
+                title: "Tell your AI",
+                subtitle: "what you need",
+                desc: "Describe your payment flow in plain language"
+              },
+              {
+                icon: Code2,
+                title: "Bloxs generates",
+                subtitle: "the code",
+                desc: "Pre-configured checkout, webhooks, and subscription logic"
+              },
+              {
+                icon: CreditCard,
+                title: "Go live and",
+                subtitle: "get paid",
+                desc: "Tax compliance, legal requirements handled automatically"
+              }].
+              map((item, i) =>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                className="relative z-10 group">
                     <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05] h-full">
                       <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-purple-500/10 border border-purple-500/20 mb-6 group-hover:bg-purple-500/20 transition-colors">
                         <item.icon className="w-8 h-8 text-purple-400" strokeWidth={1.5} />
@@ -393,15 +393,15 @@ export default function Home() {
                       <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
-                ))}
+              )}
               </div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="mt-12 text-center">
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-12 text-center">
                 <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-6 py-3">
                   <Zap className="w-4 h-4 text-purple-400" />
                   <span className="text-sm text-purple-300">One-time, subscription, or usage-based billing supported</span>
@@ -442,6 +442,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
