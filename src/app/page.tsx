@@ -2,14 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Zap,
-  Shield,
-  Globe,
-  BarChart3,
   Timer,
   CheckCircle2,
 } from "lucide-react";
@@ -163,24 +159,6 @@ export default function Home() {
                   <h3 className="font-normal text-xl mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-400 text-base leading-relaxed">{feature.desc}</p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        <section className="px-6 py-16 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-6">
-            {features.map((feature, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card className="p-6 bg-white/[0.02] border-white/10 h-full hover:bg-white/[0.04] transition-colors">
-                  <feature.icon className="w-10 h-10 mb-4 text-purple-400" strokeWidth={1.5} />
-                  <h3 className="font-semibold text-base mb-2 text-white">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
-                </Card>
               </motion.div>
             ))}
           </div>
