@@ -283,41 +283,84 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="relative">
-                    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                    <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                        <Code2 className="w-4 h-4 text-purple-400" />
-                        <span className="text-xs text-gray-400 font-mono">Generated Code</span>
-                        <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
-                          <Copy className="w-3.5 h-3.5 text-gray-400" />
-                        </button>
+                    <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="relative">
+                      <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                      <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                          <CreditCard className="w-4 h-4 text-purple-400" />
+                          <span className="text-xs text-gray-400 font-mono">Generated Subscription UI</span>
+                          <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+                            <Copy className="w-3.5 h-3.5 text-gray-400" />
+                          </button>
+                        </div>
+                        
+                        <div className="p-6 space-y-4">
+                          <div className="grid grid-cols-2 gap-3">
+                            <div className="bg-white/5 border border-white/10 rounded-lg p-4 hover:border-purple-500/50 transition-all cursor-pointer group">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm font-semibold text-white">Basic</span>
+                                <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 text-[10px] px-2 py-0.5">Popular</Badge>
+                              </div>
+                              <div className="mb-3">
+                                <span className="text-2xl font-bold text-white">$29</span>
+                                <span className="text-xs text-gray-400">/month</span>
+                              </div>
+                              <ul className="space-y-1.5 mb-4">
+                                <li className="flex items-center gap-2 text-xs text-gray-300">
+                                  <CheckCircle2 className="w-3 h-3 text-purple-400 flex-shrink-0" />
+                                  <span>Core features</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xs text-gray-300">
+                                  <CheckCircle2 className="w-3 h-3 text-purple-400 flex-shrink-0" />
+                                  <span>Email support</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xs text-gray-300">
+                                  <CheckCircle2 className="w-3 h-3 text-purple-400 flex-shrink-0" />
+                                  <span>5 projects</span>
+                                </li>
+                              </ul>
+                              <button className="w-full bg-white/10 hover:bg-white/20 text-white text-xs py-2 rounded transition-colors group-hover:bg-purple-500 group-hover:text-white">
+                                Select Basic
+                              </button>
+                            </div>
+                            
+                            <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/40 rounded-lg p-4 hover:border-purple-400 transition-all cursor-pointer group relative overflow-hidden">
+                              <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/20 rounded-full blur-2xl"></div>
+                              <div className="flex items-center justify-between mb-2 relative z-10">
+                                <span className="text-sm font-semibold text-white">Pro</span>
+                                <Badge className="bg-purple-500 text-white border-purple-400 text-[10px] px-2 py-0.5">Best Value</Badge>
+                              </div>
+                              <div className="mb-3 relative z-10">
+                                <span className="text-2xl font-bold text-white">$99</span>
+                                <span className="text-xs text-gray-300">/month</span>
+                              </div>
+                              <ul className="space-y-1.5 mb-4 relative z-10">
+                                <li className="flex items-center gap-2 text-xs text-gray-200">
+                                  <CheckCircle2 className="w-3 h-3 text-purple-300 flex-shrink-0" />
+                                  <span>All Basic features</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xs text-gray-200">
+                                  <CheckCircle2 className="w-3 h-3 text-purple-300 flex-shrink-0" />
+                                  <span>Priority support</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-xs text-gray-200">
+                                  <CheckCircle2 className="w-3 h-3 text-purple-300 flex-shrink-0" />
+                                  <span>Unlimited projects</span>
+                                </li>
+                              </ul>
+                              <button className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded transition-colors relative z-10 group-hover:bg-purple-400">
+                                Select Pro
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      
-                      <div className="p-6 font-mono text-xs overflow-x-auto">
-                        <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
-                      {`// Auto-generated checkout component
-import { CheckoutForm } from '@bloxs/react'
-
-export default function Pricing() {
-  return (
-    <CheckoutForm
-      plans={[
-        { name: 'Basic', price: 29 },
-        { name: 'Pro', price: 99 }
-      ]}
-    />
-  )
-}`}
-                        </pre>
-                      </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
                 </div>
               </div>
             </div>
