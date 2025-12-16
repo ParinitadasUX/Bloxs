@@ -486,11 +486,12 @@ export default function Home() {
                                 Select Pro
                               </button>
                             </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </motion.div>
-                </div>
+                      </motion.div>
+                      )}
+                  </div>
               </div>
             </div>
           </section>
