@@ -144,7 +144,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-12 !w-[867px] !h-64">
+          <div className="grid md:grid-cols-4 gap-12 !w-[853px] !h-64">
             {features.map((feature, i) =>
             <motion.div
               key={i}
