@@ -52,18 +52,18 @@ export default function Home() {
   const features = [
     { 
       icon: Zap, 
-      title: "Built for how you build", 
-      desc: "Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps." 
+      title: "Build with AI Power", 
+      desc: "Leverage cutting-edge AI tools to prototype, develop, and ship production-ready applications faster than ever." 
     },
     { 
       icon: Timer, 
-      title: "From prototype to production", 
-      desc: "Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products." 
+      title: "Ship in Record Time", 
+      desc: "From idea to launch in days, not months. AI-powered development workflow that scales with your ambition." 
     },
     { 
       icon: CheckCircle2, 
-      title: "Break through with our Vibe Coding Toolkit", 
-      desc: "Tools, articles, and other resources to help you deploy your application to production with confidence." 
+      title: "Production-Ready Stack", 
+      desc: "Pre-configured backend, database, auth, and deployment tools so you can focus on building features users love." 
     }
   ];
 
@@ -100,13 +100,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}>
             
             <h1 className="text-5xl md:text-6xl font-medium mb-8 leading-tight text-gray-300">
-              The <span className="text-white font-semibold">Vibe Coder's</span> Dilemma
+              For <span className="text-white font-semibold">AI Builders</span> Who Ship
             </h1>
             
             <div className="space-y-2 text-lg text-gray-400 max-w-3xl leading-relaxed">
-              <p>Your AI assistant nails the prototype. Users actually want it. Then reality hits.</p>
-              <p>Authentication breaks. Databases crash. Deployment becomes a nightmare.</p>
-              <p>You're not alone. Every vibe coder hits this wall.</p>
+              <p>Build with AI. Ship to production. Scale with confidence.</p>
+              <p>The complete toolkit for developers who use AI to build real products.</p>
+              <p>No more cobbling together tools. Everything you need, ready to go.</p>
             </div>
           </motion.div>
         </section>
