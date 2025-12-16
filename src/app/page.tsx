@@ -80,12 +80,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-primary/30 glow-orb" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-accent/30 glow-orb" />
-        <div className="absolute top-[40%] right-[20%] w-[30%] h-[30%] rounded-full bg-primary/20 glow-orb" />
-      </div>
-
       <nav className="relative z-10 border-b border-border/50 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
