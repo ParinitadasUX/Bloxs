@@ -87,10 +87,10 @@ export default function Home() {
             </motion.div>
             <span className="font-semibold text-base">bloxs</span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
+            <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
             <Link href="#features" className="hover:text-white transition-colors">Features</Link>
-            <Link href="#how-it-works" className="hover:text-white transition-colors">How it Works</Link>
             <Link href="#integration" className="hover:text-white transition-colors">Integration</Link>
+            <Link href="#how-it-works" className="hover:text-white transition-colors">How it Works</Link>
           </div>
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">Sign in</Button>
