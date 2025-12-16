@@ -365,40 +365,33 @@ export default function Home() {
                             </div>
                             
                             <div className="space-y-3">
-                          <button
-                        onClick={() => {
-                          setSelectedPath("subscription");
-                          setDemoStep("subscription-form");
-                        }}
-                        className="w-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-4 text-left transition-all group">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
-                                <CheckCircle2 className="w-5 h-5 text-purple-400" />
+                            <button
+                          onClick={() => {
+                            setSelectedPath("subscription");
+                            setDemoStep("subscription-form");
+                          }}
+                          className="w-full bg-[#16161D] hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-3 text-left transition-all group flex items-center gap-3">
+                              <span className="text-purple-400 font-mono text-xs">1.</span>
+                              <div className="flex-1">
+                                <div className="text-sm text-white font-mono group-hover:text-purple-300 transition-colors">Create subscription tiers</div>
                               </div>
-                              <div>
-                                <div className="text-sm font-semibold text-white mb-1">Create Subscription Tiers</div>
-                                <div className="text-xs text-gray-400">Define pricing plans with custom features</div>
-                              </div>
-                            </div>
-                          </button>
+                              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-purple-400 transition-colors" />
+                            </button>
 
-                          <button
-                        onClick={() => {
-                          setSelectedPath("feature-lock");
-                          setDemoStep("feature-lock-form");
-                        }}
-                        className="w-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-4 text-left transition-all group">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
-                                <Terminal className="w-5 h-5 text-purple-400" />
+                            <button
+                          onClick={() => {
+                            setSelectedPath("feature-lock");
+                            setDemoStep("feature-lock-form");
+                          }}
+                          className="w-full bg-[#16161D] hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-lg p-3 text-left transition-all group flex items-center gap-3">
+                              <span className="text-purple-400 font-mono text-xs">2.</span>
+                              <div className="flex-1">
+                                <div className="text-sm text-white font-mono group-hover:text-purple-300 transition-colors">Lock features behind payment</div>
                               </div>
-                              <div>
-                                <div className="text-sm font-semibold text-white mb-1">Lock Features Behind Payment</div>
-                                <div className="text-xs text-gray-400">Gate specific features with subscription tiers</div>
-                              </div>
-                            </div>
-                          </button>
-                        </div>
+                              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-purple-400 transition-colors" />
+                            </button>
+                          </div>
+                          </div>
                       </div>
                     </motion.div>
                 }
