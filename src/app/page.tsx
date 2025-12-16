@@ -250,7 +250,7 @@ export default function Home() {
               className="mt-12 text-center">
               <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-6 py-3">
                 <Zap className="w-4 h-4 text-purple-400" />
-                <span className="text-sm text-purple-300">One-time, subscription, or usage-based billing supported</span>
+                <span className="text-sm text-purple-300">Human-in-the-loop control ensures safety and customization</span>
               </div>
             </motion.div>
           </div>
