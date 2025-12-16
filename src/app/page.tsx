@@ -612,7 +612,7 @@ export default function Home() {
                 icon: Eye,
                 title: "Control over output",
                 badge: "Safe",
-                desc: "Review generated code, UI, and payment flows before deployment. You stay in control—approve, customize, or iterate until it's right."
+                desc: "Review generated code, UI, and payment flows before deployment. You stay in control approve, customize, or iterate until it's right."
               }].
               map((item, i) =>
               <motion.div
