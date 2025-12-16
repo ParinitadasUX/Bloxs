@@ -191,7 +191,7 @@ export default function Home() {
               {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) =>
               <div
                 key={i}
-                className="flex-shrink-0 px-8 py-6 rounded-xl glass min-w-[200px] flex items-center justify-center">
+                className="flex-shrink-0 px-8 py-6 min-w-[200px] flex items-center justify-center">
 
                   <Image
                   src={tool.logo}
