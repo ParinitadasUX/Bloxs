@@ -233,7 +233,19 @@ export default function Home() {
                       <div className="flex items-start gap-3">
                         <Sparkles className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                         <p className="text-sm text-gray-300 italic">
-                          "Add monthly subscription pricing with $29/mo and $99/mo tiers"
+                          "export function Checkout() &#123;<br />
+                          &nbsp;&nbsp;return (<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;BloxsCheckout<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pricing=&#123;&#123;<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;basic: &#123; price: 29, interval: 'month' &#125;,<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pro: &#123; price: 99, interval: 'month' &#125;<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;&#125;<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onSuccess=&#123;(session) =&gt; &#123;<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Payment successful');<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;&#125;<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br />
+                          &nbsp;&nbsp;);<br />
+                          &#125;"
                         </p>
                       </div>
                     </div>
