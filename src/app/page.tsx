@@ -203,22 +203,22 @@ export default function Home() {
 
                   {[
               {
+                icon: Code2,
+                title: "Connect through MCP",
+                badge: "Simple",
+                desc: "Bloxs connects to your AI tool via Model Context Protocol. One-time setup gives your AI native access to payment infrastructure."
+              },
+              {
                 icon: Sparkles,
-                title: "One-time",
-                badge: "Popular",
-                desc: "Single payment checkout with automated receipt generation and tax calculation."
+                title: "Prompt in your fav AI tool",
+                badge: "Natural",
+                desc: "Describe what you need in plain English—'Add subscription tiers' or 'Lock this feature for Pro users.' Bloxs understands and generates the solution."
               },
               {
-                icon: CheckCircle2,
-                title: "Subscription",
-                badge: "Best Value",
-                desc: "Recurring billing with automatic renewals, upgrade/downgrade flows, and failed payment handling."
-              },
-              {
-                icon: Bot,
-                title: "Usage-based",
-                badge: "Flexible",
-                desc: "Metered billing based on consumption with real-time usage tracking and threshold alerts."
+                icon: Eye,
+                title: "Control over output",
+                badge: "Safe",
+                desc: "Review generated code, UI, and payment flows before deployment. You stay in control—approve, customize, or iterate until it's right."
               }].
               map((item, i) =>
               <motion.div
