@@ -621,22 +621,29 @@ export default function Home() {
                   transition={{ duration: 0.4 }}
                   className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                      <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                          <CreditCard className="w-4 h-4 text-purple-400" />
-                          <span className="text-xs text-gray-400 font-mono">
-                            {selectedPath === "subscription" ? "Generated Subscription UI" : "Generated Feature Lock UI"}
-                          </span>
-                          <button
-                        onClick={() => {
-                          setDemoStep("select");
-                          setSubscriptionTiers([{ name: "", price: "", features: [""] }]);
-                          setSelectedFeatures([]);
-                        }}
-                        className="ml-auto text-xs text-purple-400 hover:text-purple-300 transition-colors">
-                            Reset
-                          </button>
-                        </div>
+                        <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0D0D12]">
+                            <Terminal className="w-4 h-4 text-purple-400" />
+                            <span className="text-xs text-purple-300 font-mono">bloxs_cli</span>
+                            <button
+                          onClick={() => {
+                            setDemoStep("select");
+                            setSubscriptionTiers([{ name: "", price: "", features: [""] }]);
+                            setSelectedFeatures([]);
+                          }}
+                          className="ml-auto text-xs text-purple-400 hover:text-purple-300 transition-colors font-mono">
+                              [reset]
+                            </button>
+                          </div>
+                          
+                          <div className="px-6 pt-4 pb-2 border-b border-white/10 bg-[#16161D]">
+                            <div className="flex items-start gap-3">
+                              <span className="text-green-400 font-mono text-xs">✓</span>
+                              <p className="text-green-400 text-xs font-mono">
+                                {selectedPath === "subscription" ? "Generated subscription UI" : "Generated feature lock UI"}
+                              </p>
+                            </div>
+                          </div>
                         
                         <div className="p-6 space-y-4 max-h-96 overflow-y-auto">
                           {selectedPath === "subscription" &&
