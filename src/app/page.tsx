@@ -106,7 +106,7 @@ export default function Home() {
               <span className="text-purple-400">AI-first builders</span>
             </h1>
             
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest checkout, tax, compliance, analytics.
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 !whitespace-pre-line">Zero-code payment integration. Tell your AI tool what you need, and bloxs handles the rest checkout, tax, compliance, analytics.
 
             </p>
 
