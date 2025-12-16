@@ -150,7 +150,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {features.map((feature, i) =>
             <motion.div
               key={i}
