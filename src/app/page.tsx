@@ -229,7 +229,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20">
                 <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/20 text-xs">How it Works</Badge>
-                <h2 className="text-4xl font-bold mb-4 text-white">Simple prompt, powerful results</h2>
+                <h2 className="text-4xl font-bold mb-4 text-white">Simple prompt, production ready</h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">Tell your AI tool what you need, and Bloxs generates production-ready payment code</p>
             </motion.div>
 
@@ -338,34 +338,34 @@ export default function Home() {
                       
                       <div className="p-6">
                         <Input
-                          type="text"
-                          placeholder="Add a checkout page with basic and pro tiers..."
-                          value={promptInput}
-                          onChange={(e) => setPromptInput(e.target.value)}
-                          className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs font-mono mb-3"
-                        />
+                        type="text"
+                        placeholder="Add a checkout page with basic and pro tiers..."
+                        value={promptInput}
+                        onChange={(e) => setPromptInput(e.target.value)}
+                        className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs font-mono mb-3" />
+
                           <Button
-                            onClick={() => {
-                              if (promptInput.trim()) {
-                                setShowMcpSetup(true);
-                              } else {
-                                toast.error("Please enter a prompt");
-                              }
-                            }}
-                            className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
-                          >
+                        onClick={() => {
+                          if (promptInput.trim()) {
+                            setShowMcpSetup(true);
+                          } else {
+                            toast.error("Please enter a prompt");
+                          }
+                        }}
+                        className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded">
+
                             Generate
                           </Button>
                       </div>
                     </div>
                   </motion.div>
 
-                    {showMcpSetup && (
-                      <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                      className="relative">
+                    {showMcpSetup &&
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative">
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                         <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
@@ -378,45 +378,45 @@ export default function Home() {
                             <div>
                               <label className="text-xs text-gray-400 mb-1 block">MCP Server URL</label>
                               <Input
-                                type="text"
-                                value="https://mcp.bloxs.io/connect"
-                                readOnly
-                                className="bg-white/5 border-white/10 text-white text-xs font-mono"
-                              />
+                          type="text"
+                          value="https://mcp.bloxs.io/connect"
+                          readOnly
+                          className="bg-white/5 border-white/10 text-white text-xs font-mono" />
+
                             </div>
                             <div>
                               <label className="text-xs text-gray-400 mb-1 block">API Key</label>
                               <Input
-                                type="text"
-                                value="bloxs_mcp_demo_key_12345"
-                                readOnly
-                                className="bg-white/5 border-white/10 text-white text-xs font-mono"
-                              />
+                          type="text"
+                          value="bloxs_mcp_demo_key_12345"
+                          readOnly
+                          className="bg-white/5 border-white/10 text-white text-xs font-mono" />
+
                             </div>
                             <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-3">
                               <p className="text-xs text-purple-300">Copy these credentials to your AI tool's MCP settings</p>
                             </div>
                               <Button
-                                onClick={() => {
-                                  setShowMcpSetup(false);
-                                  setShowPaymentUI(true);
-                                  toast.success("MCP Connected! Generating payment UI...");
-                                }}
-                                className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
-                              >
+                        onClick={() => {
+                          setShowMcpSetup(false);
+                          setShowPaymentUI(true);
+                          toast.success("MCP Connected! Generating payment UI...");
+                        }}
+                        className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded">
+
                                 Continue
                               </Button>
                           </div>
                         </div>
                       </motion.div>
-                    )}
+                }
 
-                    {showPaymentUI && (
-                    <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative">
+                    {showPaymentUI &&
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative">
                       <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
                       <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
@@ -489,7 +489,7 @@ export default function Home() {
                         </div>
                       </div>
                     </motion.div>
-                    )}
+                }
                 </div>
             </div>
           </div>
