@@ -63,7 +63,7 @@ export default function Home() {
     desc: "One prompt in your AI tool creates working payments and subscriptions."
   },
   {
-    icon: MessageCircleHeart,
+    icon: CalendarHeart,
     title: "Handle subscriptions",
     desc: "Bloxs manage upgrades, cancellations, renewals, and failed payments for you."
   },
