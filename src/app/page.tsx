@@ -261,29 +261,42 @@ export default function Home() {
                 </motion.div>
 
                 <div className="space-y-6">
-                  <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="relative">
-                    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
-                    <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                        <Sparkles className="w-4 h-4 text-purple-400" />
-                        <span className="text-xs text-gray-400 font-mono">Prompt in you AI Tool</span>
-                        <button className="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
-                          <Copy className="w-3.5 h-3.5 text-gray-400" />
-                        </button>
+                    <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="relative">
+                      <div className="absolute -left-4 top-0 bottom-0 w-1 bg-purple-500/30"></div>
+                      <div className="bg-[#1A1A23] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
+                          <Sparkles className="w-4 h-4 text-purple-400" />
+                          <span className="text-xs text-gray-400 font-mono">Prompt in you AI Tool</span>
+                        </div>
+                        
+                        <div className="p-6">
+                          <Input
+                            type="text"
+                            placeholder="Add a checkout page with basic and pro tiers..."
+                            value={promptInput}
+                            onChange={(e) => setPromptInput(e.target.value)}
+                            className="bg-white/5 border-white/10 focus:border-purple-500 text-white placeholder:text-gray-500 text-xs font-mono mb-3"
+                          />
+                          <Button
+                            onClick={() => {
+                              if (promptInput.trim()) {
+                                setShowDetailsForm(true);
+                              } else {
+                                toast.error("Please enter a prompt");
+                              }
+                            }}
+                            className="w-full bg-purple-500 hover:bg-purple-600 text-white text-xs py-2 rounded"
+                          >
+                            Generate
+                          </Button>
+                        </div>
                       </div>
-                      
-                      <div className="p-6 font-mono text-xs overflow-x-auto">
-                        <pre className="text-white leading-relaxed break-words whitespace-pre-wrap">
-                      {`"Add a checkout page with basic and pro tiers at $29 and $99 per month"`}
-                        </pre>
-                      </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
 
                     <motion.div
                     initial={{ opacity: 0, y: 20 }}
