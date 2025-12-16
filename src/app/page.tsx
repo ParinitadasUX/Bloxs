@@ -5,15 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { 
-  Zap, 
-  CreditCard, 
+import {
+  Zap,
+  CreditCard,
   ArrowRight,
   Check,
   Globe,
   Shield,
-  BarChart3
-} from "lucide-react";
+  BarChart3 } from
+"lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -55,21 +55,21 @@ export default function Home() {
   };
 
   const aiToolLogos = [
-    { name: "Cursor", logo: "/logos/cursor.svg" },
-    { name: "v0", logo: "/logos/v0.svg" },
-    { name: "Bolt", logo: "/logos/bolt.png" },
-    { name: "Replit", logo: "/logos/replit.svg" },
-    { name: "GitHub Copilot", logo: "/logos/github.svg" },
-    { name: "Windsurf", logo: "/logos/windsurf.svg" },
-    { name: "Lovable", logo: "/logos/lovable.svg" },
-    { name: "Figma", logo: "/logos/figma.svg" },
-    { name: "Gemini", logo: "/logos/gemini.svg" },
-    { name: "Perplexity", logo: "/logos/perplexity.svg" },
-    { name: "Tabnine", logo: "/logos/tabnine.svg" },
-    { name: "Cody", logo: "/logos/cody.svg" },
-    { name: "CodeWhisperer", logo: "/logos/codewhisperer.svg" },
-    { name: "Devin", logo: "/logos/devin.svg" },
-  ];
+  { name: "Cursor", logo: "/logos/cursor.svg" },
+  { name: "v0", logo: "/logos/v0.svg" },
+  { name: "Bolt", logo: "/logos/bolt.png" },
+  { name: "Replit", logo: "/logos/replit.svg" },
+  { name: "GitHub Copilot", logo: "/logos/github.svg" },
+  { name: "Windsurf", logo: "/logos/windsurf.svg" },
+  { name: "Lovable", logo: "/logos/lovable.svg" },
+  { name: "Figma", logo: "/logos/figma.svg" },
+  { name: "Gemini", logo: "/logos/gemini.svg" },
+  { name: "Perplexity", logo: "/logos/perplexity.svg" },
+  { name: "Tabnine", logo: "/logos/tabnine.svg" },
+  { name: "Cody", logo: "/logos/cody.svg" },
+  { name: "CodeWhisperer", logo: "/logos/codewhisperer.svg" },
+  { name: "Devin", logo: "/logos/devin.svg" }];
+
 
   const features = [
   { icon: Zap, title: "Zero-Code Integration", desc: "Tell your AI what you want. No SDKs, no backend." },
@@ -83,13 +83,13 @@ export default function Home() {
       <nav className="relative z-10 border-b border-border/50 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image 
-              src="/bloxs-logo.png" 
-              alt="bloxs logo" 
-              width={32} 
+            <Image
+              src="/bloxs-logo.png"
+              alt="bloxs logo"
+              width={32}
               height={32}
-              className="w-8 h-8"
-            />
+              className="w-8 h-8" />
+
             <span className="font-semibold text-lg">bloxs</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm">
@@ -177,31 +177,31 @@ export default function Home() {
             <motion.div
               className="flex gap-12 items-center"
               animate={{
-                x: [0, -1400],
+                x: [0, -1400]
               }}
               transition={{
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
                   duration: 25,
-                  ease: "linear",
-                },
-              }}
-            >
-              {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center"
-                >
-                  <Image 
-                    src={tool.logo} 
-                    alt={tool.name}
-                    width={120}
-                    height={40}
-                    className="opacity-70 hover:opacity-100 transition-opacity"
-                  />
+                  ease: "linear"
+                }
+              }}>
+
+              {[...aiToolLogos, ...aiToolLogos, ...aiToolLogos].map((tool, i) =>
+              <div
+                key={i}
+                className="flex-shrink-0 px-8 py-6 rounded-xl glass border border-border/30 min-w-[200px] flex items-center justify-center">
+
+                  <Image
+                  src={tool.logo}
+                  alt={tool.name}
+                  width={120}
+                  height={40}
+                  className="opacity-70 hover:opacity-100 transition-opacity" />
+
                 </div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -270,13 +270,13 @@ export default function Home() {
       <footer className="relative z-10 border-t border-border/50 backdrop-blur-xl px-6 py-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image 
-              src="/bloxs-logo.png" 
-              alt="bloxs logo" 
-              width={32} 
+            <Image
+              src="/bloxs-logo.png"
+              alt="bloxs logo"
+              width={32}
               height={32}
-              className="w-8 h-8"
-            />
+              className="w-8 h-8" />
+
             <span className="font-semibold">bloxs</span>
           </div>
           <div className="flex gap-8 text-sm text-muted-foreground">
@@ -286,6 +286,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
