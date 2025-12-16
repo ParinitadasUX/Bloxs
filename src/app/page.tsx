@@ -28,7 +28,6 @@ export default function Home() {
   const emailFormRef = useRef<HTMLFormElement>(null);
   const [promptInput, setPromptInput] = useState("");
   const [showMcpSetup, setShowMcpSetup] = useState(false);
-  const [showDetailsForm, setShowDetailsForm] = useState(false);
   const [showPaymentUI, setShowPaymentUI] = useState(false);
 
   useEffect(() => {
