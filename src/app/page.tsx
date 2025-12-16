@@ -144,7 +144,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-12 !w-[853px] !h-64">
+          <div className="grid md:grid-cols-3 gap-12">
             {features.map((feature, i) =>
             <motion.div
               key={i}
@@ -152,11 +152,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <div className="!w-full !h-[228px]">
+                <div className="h-[228px]">
                   <feature.icon className="w-12 h-12 mb-6 text-white" strokeWidth={1.5} />
                   <div className="border-t border-white/10 mb-6"></div>
-                  <h3 className="font-normal text-lg mb-3 text-white !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line">{feature.desc}</p>
+                  <h3 className="font-normal text-lg mb-3 text-white whitespace-pre-line">{feature.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed whitespace-pre-line">{feature.desc}</p>
                 </div>
               </motion.div>
             )}
